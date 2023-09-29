@@ -1,0 +1,140 @@
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Козлов Кирилл\проект\1 сцена\bin\Debug\1 сцена.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13128, функция: HPEN__* {anonymous}::TX::txSetColor(COLORREF, double, HDC),
+
+Сообщение: Окно рисования не создано или не в порядке.
+Если вы указали параметр "dc", то он неверен.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005042FC (32-bit), Flags: Cmdre0, Thread: 0x21E4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041C445 in D:\Козлов Кирилл\проект\1 сцена\bin\Debug\1 сцена.exe: txSetColor() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13128)
+
+# 1 0x0042B9E9 in D:\Козлов Кирилл\проект\1 сцена\bin\Debug\1 сцена.exe: main() at D:/Козлов Кирилл/проект/1 сцена/main.cpp (8):
+
+      6:     {
+      7:     //корпус ракеты
+=>    8:     txSetColor(RGB(114, 158, 145));
+      9:     txSetFillColor(RGB(114, 158, 145));
+     10:     POINT raketa[5] = {{610,460},{610,165},{650,115},{690,165},{690,460}};
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in HPEN__* {anonymous}::TX::txSetColor(COLORREF, double, HDC) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13128):
+
+  13126: HPEN txSetColor (COLORREF color, double thickness /*= 1*/, HDC dc /*= txDC()*/)
+  13127:     {
+=>13128: $1  if (_TX_DEFAULT_HDC_FAILED (dc)) return NULL;
+  13129: 
+  13130: $   HPEN pen = Win32::CreatePen ((color == TX_TRANSPARENT? PS_NULL : PS_SOLID), ROUND (thickness), color);
+
+# 1 in int main() at D:\Козлов Кирилл\проект\1 сцена\main.cpp (8):
+
+      6:     {
+      7:     //корпус ракеты
+=>    8:     txSetColor(RGB(114, 158, 145));
+      9:     txSetFillColor(RGB(114, 158, 145));
+     10:     POINT raketa[5] = {{610,460},{610,165},{650,115},{690,165},{690,460}};
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 15 2023 17:46:20, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 15 2023 17:46:39
+
+Run file:	D:\Козлов Кирилл\проект\1 сцена\bin\Debug\1 сцена.exe
+Directory:	D:\Козлов Кирилл\проект\1 сцена
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Козлов Кирилл\проект\1 сцена\bin\Debug\1 сцена.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 14248, функция: intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND),
+
+Сообщение: Возможно, окно рисования не создано или не в порядке.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005042FC (32-bit), Flags: CMdre0, Thread: 0x2890 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00426709 in D:\Козлов Кирилл\проект\1 сцена\bin\Debug\1 сцена.exe: txPlayVideo() at c:/codeblocks/codeblocks/mingw/include/txlib.h (14248)
+# 1 0x004278B8 in D:\Козлов Кирилл\проект\1 сцена\bin\Debug\1 сцена.exe: txPlayVideo() at c:/codeblocks/codeblocks/mingw/include/txlib.h (14400)
+# 2 0x0040570B in D:\Козлов Кирилл\проект\1 сцена\bin\Debug\1 сцена.exe: _txCleanup() at c:/codeblocks/codeblocks/mingw/include/txlib.h (9082)
+# 3 0x00404996 in D:\Козлов Кирилл\проект\1 сцена\bin\Debug\1 сцена.exe: _txOnCExit() at c:/codeblocks/codeblocks/mingw/include/txlib.h (8894)
+# 4 0x00401284 in D:\Козлов Кирилл\проект\1 сцена\bin\Debug\1 сцена.exe: __mingw_CRTStartup()
+# 5 0x004012C5 in D:\Козлов Кирилл\проект\1 сцена\bin\Debug\1 сцена.exe: WinMainCRTStartup()
+# 6 0x771D7B1E in C:\Windows\SYSTEM32\ntdll.dll: RtlGetAppContainerNamedObjectPath()
+# 7 0x771D7AEE in C:\Windows\SYSTEM32\ntdll.dll: RtlGetAppContainerNamedObjectPath()
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND) at c:\codeblocks\codeblocks\mingw\include\txlib.h (14248):
+
+  14246:                       double zoom /*= 0*/, double gain /*= 1*/, HWND wnd /*= txWindow()*/)
+  14247:     {
+=>14248: $1  if (wnd && wnd == txWindow() && _TX_TXWINDOW_FAILED()) return -1;
+  14249: 
+  14250: $   int time = GetTickCount();  //-V2551
+
+# 1 in intptr_t {anonymous}::TX::txPlayVideo(const char*, double, double, HWND) at c:\codeblocks\codeblocks\mingw\include\txlib.h (14400):
+
+  14398: intptr_t txPlayVideo (const char fileName[], double zoom /*= 0*/, double gain /*= 0*/, HWND wnd /*= txWindow()*/)
+  14399:     {
+=>14400: $1  return txPlayVideo (0, 0, 0, 0, fileName, zoom, gain, wnd);
+  14401:     }
+  14402: 
+
+# 2 in void {anonymous}::TX::_txCleanup() at c:\codeblocks\codeblocks\mingw\include\txlib.h (9082):
+
+   9080: 
+   9081: $   txSpeak     (NULL);
+=> 9082: $   txPlayVideo (NULL);
+   9083: 
+   9084: $   delete _txCanvas_UserDCs;
+
+# 3 in void {anonymous}::TX::_txOnCExit() at c:\codeblocks\codeblocks\mingw\include\txlib.h (8894):
+
+   8892:     OutputDebugString ("\n");
+   8893: 
+=> 8894: $5  _txCleanup();
+   8895: 
+   8896:     _TX_CALLv (Win32::_cexit, ());
+
+# 4 in int main() at D:\Козлов Кирилл\проект\1 сцена\main.cpp (16):
+
+     14:     txPolygon (raketa,5);
+     15: 
+=>   16:     txTextCursor (false);
+     17:     return 0;
+     18:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 15 2023 17:47:29, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 15 2023 17:47:48
+
+Run file:	D:\Козлов Кирилл\проект\1 сцена\bin\Debug\1 сцена.exe
+Directory:	D:\Козлов Кирилл\проект\1 сцена
+
+--------------------------------------------------
