@@ -1,94 +1,113 @@
 #include "TXLib.h"
 
 void drawSky()
-{
-    txSetColor(RGB(81,183,232));
-    txSetFillColor(RGB(81,183,232));
-    txRectangle(0,0,800,600);
-    txSetColor(RGB(238,217,117));
-    txSetFillColor(RGB(238,217,117));
-    txRectangle(0,420,800,600);
-}
-
-void drawSpace()
     {
-    txSetColor(RGB(19,3,112));
-    txSetFillColor(RGB(19,3,112));
-    txRectangle(0,0,800,600);
+        txSetColor(RGB(81,183,232));
+        txSetFillColor(RGB(81,183,232));
+        txRectangle(0,0,800,600);
+        txSetColor(RGB(238,217,117));
+        txSetFillColor(RGB(238,217,117));
+        txRectangle(0,420,800,600);
     }
 
+void drawSpace()
+        {
+        txSetColor(RGB(19,3,112));
+        txSetFillColor(RGB(19,3,112));
+        txRectangle(0,0,800,600);
+        }
+
 void drawRocket(int x,int y)
-{
-    //корпус ракеты
-    txSetColor(TX_BLACK,3);
-    txSetFillColor(RGB(114, 158, 145));
-    POINT raketa[5] = {{x+610-610,y},{x+610-610,y+165-460},{x+40,y+100-460},{x+80,y+165-460},{x+80,y+460-460}};
-    txPolygon (raketa,5);
-}
+    {
+        //корпус ракеты
+        txSetColor(TX_BLACK,3);
+        txSetFillColor(RGB(114, 158, 145));
+        POINT raketa[5] = {{x+610-610,y},{x+610-610,y+165-460},{x+40,y+100-460},{x+80,y+165-460},{x+80,y+460-460}};
+        txPolygon (raketa,5);
+    }
+
+void drawRocket2()
+    {
+        txSetColor(TX_BLACK,3);
+        txSetFillColor(RGB(114, 158, 145));
+        POINT raketa2[5] = {{х,y},{x+50,y-35},{x+170,y-35},{x+170,y+40},{x+50,y+40}};
+        txPolygon (raketa2,5);
+        txSetFillColor(RGB(107, 199, 172));
+        txCircle(x+100,y,30);
+        txSetFillColor(RGB(114, 158, 145));
+
+    }
+
+void draw ogrizok()
+    {
+        txSetColor(TX_BLACK,3);
+        txSetFillColor(RGB(114, 158, 145));
+        txRectangle(x+170,y-35,x+170,y+40);
+    }
 
 void drawDvigatel(int x,int y)
-{
-    //двигатели ракеты
-    POINT dvigat1[3] = {{x+610-610,y+0},{x+565-610,y+0},{x+610-610,y+280-460}};
-    txPolygon (dvigat1,3);
-    POINT dvigat2[3] = {{x+20,y+0},{x+60,y+0},{x+40,y+280-460}};
-    txPolygon (dvigat2,3);
-    POINT dvigat3[3] = {{x+80,y+0},{x+120,y+0},{x+80,y+280-460}};
-    txPolygon (dvigat3,3);
-}
+    {
+        //двигатели ракеты
+        POINT dvigat1[3] = {{x+610-610,y+0},{x+565-610,y+0},{x+610-610,y+280-460}};
+        txPolygon (dvigat1,3);
+        POINT dvigat2[3] = {{x+20,y+0},{x+60,y+0},{x+40,y+280-460}};
+        txPolygon (dvigat2,3);
+        POINT dvigat3[3] = {{x+80,y+0},{x+120,y+0},{x+80,y+280-460}};
+        txPolygon (dvigat3,3);
+    }
 
 void drawWindow(int x,int y)
-{
-    //иллюминатор
-    txSetColor(TX_BLACK,3);
-    txSetFillColor(RGB(107, 199, 172));
-    txCircle(x+650-610,y+225-460,30);
-}
+    {
+        //иллюминатор
+        txSetColor(TX_BLACK,3);
+        txSetFillColor(RGB(107, 199, 172));
+        txCircle(x+650-610,y+225-460,30);
+    }
 
 void drawAstronaft(int aa)
-{
-    //человечек
-    txSetColor(TX_WHITE,13);
-    txSetFillColor(RGB(235, 206, 134));
-    txCircle(495,aa+322-350,20); //голова
-    txSetColor(TX_WHITE,8);
-    txSetFillColor(TX_WHITE);
-    txEllipse(470,aa,520,aa+452-350); //тело
-    txLine(505,aa+100,517,aa+508-350); //п нога
-    txLine(487,aa+444-350,466,aa+514-350); //л нога
-    txLine(515,aa+375-350,536,aa+424-350); //п рука
+    {
+        //человечек
+        txSetColor(TX_WHITE,13);
+        txSetFillColor(RGB(235, 206, 134));
+        txCircle(495,aa-28,20); //голова
+        txSetColor(TX_WHITE,8);
+        txSetFillColor(TX_WHITE);
+        txEllipse(470,aa,520,aa+102); //тело
+        txLine(505,aa+100,517,aa+158); //п нога
+        txLine(487,aa+94,466,aa+164); //л нога
+        txLine(515,aa+25,536,aa+74); //п рука
 
-    //лицо
-    txSetColor(TX_BLACK,3);
-    txSetFillColor(TX_BLACK);
-    txCircle(490,aa+319-350,1);
-    txCircle(501,aa+319-350,1);
-    txArc (488, aa+319-350, 504, aa+331-350, 180, 180); //рот
-}
+        //лицо
+        txSetColor(TX_BLACK,3);
+        txSetFillColor(TX_BLACK);
+        txCircle(490,aa-31,1);
+        txCircle(501,aa+-31,1);
+        txArc (488, aa-31, 504, aa-19, 180, 180); //рот
+    }
 
 void mahat(int a,int aa)
-{
-    txSetColor(TX_WHITE,8);
-    txSetFillColor(TX_WHITE);
-    txLine(470,aa+360-350,452,a); //л рука
-}
+    {
+        txSetColor(TX_WHITE,8);
+        txSetFillColor(TX_WHITE);
+        txLine(470,aa+360-350,452,a); //л рука
+    }
 
 void drawElevator(int aa)
-{
-    //лифт
-    txSetColor(TX_BLACK,3);
-    txSetFillColor(RGB(52, 105, 24));
-    txLine(448,aa+515-350,553,aa+515-350);
-    POINT liftik[6] = {{544,591},{547,286},{620,243},{639,260},{570,301},{571,591}};
-    txPolygon (liftik,6);
-}
+    {
+        //лифт
+        txSetColor(TX_BLACK,3);
+        txSetFillColor(RGB(52, 105, 24));
+        txLine(448,aa+515-350,553,aa+515-350);
+        POINT liftik[6] = {{544,591},{547,286},{620,243},{639,260},{570,301},{571,591}};
+        txPolygon (liftik,6);
+    }
 
 void drawBox(int color,int b)
-{
-    txSetColor(color);
-    txSetFillColor(color);
-    txRectangle(b,190,b+545-475,260);
-}
+    {
+        txSetColor(color);
+        txSetFillColor(color);
+        txRectangle(b,190,b+545-475,260);
+    }
 
 void drawfire(int d,int r)
     {
@@ -123,8 +142,12 @@ txCreateWindow(800,600);
     int vzlet = 460;
     int xdvigatel = 610;
     int toplivo = vzlet+5;
+    float rChel = 1;
+    int xr = 415;
+    int yr = 280;
     HDC phone = txLoadImage ("самолет.bmp");
     HDC Earth = txLoadImage ("космос.bmp");
+    HDC Vishe = txLoadImage ("земл€чутьвыше.bmp");
 
 
     //1 сцена
@@ -176,33 +199,12 @@ txCreateWindow(800,600);
         ychel = ychel -2;
         yarm = yarm -2;
         yarm1 = yarm1 -2;
+        rChel -= 0.01;
         txEnd();
         txSleep(15);
     }
-   //превращение винкс
-     if(ychel == 120)
-     {
-         txSleep(1000);
-         while(ychel>-1000)
-        {
-            txBegin();
-            drawSky();
-            txBitBlt (txDC(), 0, 0, 800, 600, phone);
-            drawRocket(drozh,vzlet);
-            drawDvigatel(drozh,toplivo);
-            drawWindow(drozh,vzlet);
-            drawBox(Box,xBox);
-            drawAstronaft(ychel);
-            mahat(yarm,yarm1);
-            drawElevator(ychel);
-            ychel = ychel -500;
-            yarm = yarm -500;
-            yarm1 = yarm1 -500;
-            txEnd();
-            txSleep(1);
-        }
-      }
       txSleep(150);
+
       //упаковка чебурка
       while(xBox<600)
           {
@@ -214,8 +216,6 @@ txCreateWindow(800,600);
             drawWindow(drozh,vzlet);
             drawElevator(ychel);
             drawBox(Box,xBox);
-            drawAstronaft(ychel);
-            mahat(yarm,yarm1);
             xBox = xBox + 2;
             txEnd();
             txSleep(15);
@@ -232,8 +232,6 @@ txCreateWindow(800,600);
                 drawRocket(drozh,vzlet);
                 drawDvigatel(drozh,toplivo);
                 drawWindow(drozh,vzlet);
-                drawAstronaft(ychel);
-                mahat(yarm,yarm1);
                 yFire = yFire + 2;
                 txEnd();
                 txSleep(15);
@@ -247,8 +245,6 @@ txCreateWindow(800,600);
                 drawRocket(drozh,vzlet);
                 drawDvigatel(drozh,toplivo);
                 drawWindow(drozh,vzlet);
-                drawAstronaft(ychel);
-                mahat(yarm,yarm1);
                 yFire = yFire -5;
                 vzlet = vzlet -5;
                 toplivo = toplivo -5;
@@ -296,8 +292,20 @@ txCreateWindow(800,600);
             txSleep(15);
 
         }
+
+    //2 сцена
+
+    while(xr>-170)
+    {
+    drawSpace();
+    txBitBlt (txDC(), 0, 0, 800, 600, Vishe);
+    drawRocket2(xr,yr);
+    ogrizok(xr,yr);
+    }
+
 txDeleteDC (phone);
 txDeleteDC (Earth);
+txDeleteDC (Vishe);
 txTextCursor (false);
 return 0;
 }

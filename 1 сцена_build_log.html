@@ -4,58 +4,100 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body>
 <tt>
-Build started on: <u>29-09-2023 at 18:32.33</u><br />
-Build ended on: <u>29-09-2023 at 18:32.49</u><p />
+Build started on: <u>06-10-2023 at 18:30.53</u><br />
+Build ended on: <u>06-10-2023 at 18:30.59</u><p />
 <b>-------------- Build: Debug in 1 сцена (compiler: NOT FOR PROJECTS! = MinGW GCC + Strict + Fast + Save (Requires Git))---------------</b><br />
-g++git-auto.bat "D:\Козлов Кирилл\проект\1 сцена\main.cpp" -o "bin\Debug\1 сцена.exe" -mwindows  -Wall -fexceptions  -g  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC<br />
+g++git-auto.bat "D:\Козлов Кирилл\myproject-main\main.cpp" -o "bin\Debug\1 сцена.exe" -mwindows  -Wall -fexceptions  -g  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC<br />
 ------------------------------------------------------------------------------------------------------<br />
 Compilation ERRORS:<br />
 <br />
-D:\Козлов Кирилл\проект\1 сцена\main.cpp: In function 'void drawSky()':<br />
-<font color="#0000ff">D:\Козлов Кирилл\проект\1 сцена\main.cpp:3:6: warning: no previous declaration for 'void drawSky()' [-Wmissing-declarations]</font><br />
+<font color="#ff0000">D:\Козлов Кирилл\myproject-main\main.cpp:33:9: error: stray '\365' in program</font><br />
+         POINT raketa2[5] = {{х,y},{x+50,y-35},{x+170,y-35},{x+170,y+40},{x+50,y+40}};<br />
+         ^<br />
+D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawSky()':<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:3:6: warning: no previous declaration for 'void drawSky()' [-Wmissing-declarations]</font><br />
  void drawSky()<br />
       ^<br />
-D:\Козлов Кирилл\проект\1 сцена\main.cpp: In function 'void drawSpace()':<br />
-<font color="#0000ff">D:\Козлов Кирилл\проект\1 сцена\main.cpp:13:6: warning: no previous declaration for 'void drawSpace()' [-Wmissing-declarations]</font><br />
+D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawSpace()':<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:13:6: warning: no previous declaration for 'void drawSpace()' [-Wmissing-declarations]</font><br />
  void drawSpace()<br />
       ^<br />
-D:\Козлов Кирилл\проект\1 сцена\main.cpp: In function 'void drawRocket(int, int, int)':<br />
-<font color="#0000ff">D:\Козлов Кирилл\проект\1 сцена\main.cpp:20:6: warning: no previous declaration for 'void drawRocket(int, int, int)' [-Wmissing-declarations]</font><br />
- void drawRocket(int x,int y,int d)<br />
+D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawRocket(int, int)':<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:20:6: warning: no previous declaration for 'void drawRocket(int, int)' [-Wmissing-declarations]</font><br />
+ void drawRocket(int x,int y)<br />
       ^<br />
-D:\Козлов Кирилл\проект\1 сцена\main.cpp: In function 'void drawWindow(int, int)':<br />
-<font color="#0000ff">D:\Козлов Кирилл\проект\1 сцена\main.cpp:38:6: warning: no previous declaration for 'void drawWindow(int, int)' [-Wmissing-declarations]</font><br />
+D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawRocket2()':<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:29:6: warning: no previous declaration for 'void drawRocket2()' [-Wmissing-declarations]</font><br />
+ void drawRocket2()<br />
+      ^<br />
+<font color="#ff0000">D:\Козлов Кирилл\myproject-main\main.cpp:33:31: error: expected primary-expression before ',' token</font><br />
+         POINT raketa2[5] = {{х,y},{x+50,y-35},{x+170,y-35},{x+170,y+40},{x+50,y+40}};<br />
+                               ^<br />
+<font color="#ff0000">D:\Козлов Кирилл\myproject-main\main.cpp:33:32: error: 'y' was not declared in this scope</font><br />
+         POINT raketa2[5] = {{х,y},{x+50,y-35},{x+170,y-35},{x+170,y+40},{x+50,y+40}};<br />
+                                ^<br />
+<font color="#ff0000">D:\Козлов Кирилл\myproject-main\main.cpp:33:36: error: 'x' was not declared in this scope</font><br />
+         POINT raketa2[5] = {{х,y},{x+50,y-35},{x+170,y-35},{x+170,y+40},{x+50,y+40}};<br />
+                                    ^<br />
+D:\Козлов Кирилл\myproject-main\main.cpp: At global scope:<br />
+<font color="#ff0000">D:\Козлов Кирилл\myproject-main\main.cpp:41:11: error: expected initializer before 'ogrizok'</font><br />
+ void draw ogrizok()<br />
+           ^<br />
+D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawDvigatel(int, int)':<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:48:6: warning: no previous declaration for 'void drawDvigatel(int, int)' [-Wmissing-declarations]</font><br />
+ void drawDvigatel(int x,int y)<br />
+      ^<br />
+D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawWindow(int, int)':<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:59:6: warning: no previous declaration for 'void drawWindow(int, int)' [-Wmissing-declarations]</font><br />
  void drawWindow(int x,int y)<br />
       ^<br />
-D:\Козлов Кирилл\проект\1 сцена\main.cpp: In function 'void drawAstronaft(int)':<br />
-<font color="#0000ff">D:\Козлов Кирилл\проект\1 сцена\main.cpp:46:6: warning: no previous declaration for 'void drawAstronaft(int)' [-Wmissing-declarations]</font><br />
+D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawAstronaft(int)':<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:67:6: warning: no previous declaration for 'void drawAstronaft(int)' [-Wmissing-declarations]</font><br />
  void drawAstronaft(int aa)<br />
       ^<br />
-D:\Козлов Кирилл\проект\1 сцена\main.cpp: In function 'void mahat(int, int)':<br />
-<font color="#0000ff">D:\Козлов Кирилл\проект\1 сцена\main.cpp:67:6: warning: no previous declaration for 'void mahat(int, int)' [-Wmissing-declarations]</font><br />
+D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void mahat(int, int)':<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:88:6: warning: no previous declaration for 'void mahat(int, int)' [-Wmissing-declarations]</font><br />
  void mahat(int a,int aa)<br />
       ^<br />
-D:\Козлов Кирилл\проект\1 сцена\main.cpp: In function 'void drawElevator(int)':<br />
-<font color="#0000ff">D:\Козлов Кирилл\проект\1 сцена\main.cpp:74:6: warning: no previous declaration for 'void drawElevator(int)' [-Wmissing-declarations]</font><br />
+D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawElevator(int)':<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:95:6: warning: no previous declaration for 'void drawElevator(int)' [-Wmissing-declarations]</font><br />
  void drawElevator(int aa)<br />
       ^<br />
-D:\Козлов Кирилл\проект\1 сцена\main.cpp: In function 'void drawBox(int, int)':<br />
-<font color="#0000ff">D:\Козлов Кирилл\проект\1 сцена\main.cpp:84:6: warning: no previous declaration for 'void drawBox(int, int)' [-Wmissing-declarations]</font><br />
+D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawBox(int, int)':<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:105:6: warning: no previous declaration for 'void drawBox(int, int)' [-Wmissing-declarations]</font><br />
  void drawBox(int color,int b)<br />
       ^<br />
-D:\Козлов Кирилл\проект\1 сцена\main.cpp: In function 'void drawfire(int)':<br />
-<font color="#0000ff">D:\Козлов Кирилл\проект\1 сцена\main.cpp:91:6: warning: no previous declaration for 'void drawfire(int)' [-Wmissing-declarations]</font><br />
- void drawfire(int d)<br />
+D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawfire(int, int)':<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:112:6: warning: no previous declaration for 'void drawfire(int, int)' [-Wmissing-declarations]</font><br />
+ void drawfire(int d,int r)<br />
       ^<br />
-D:\Козлов Кирилл\проект\1 сцена\main.cpp: In function 'void drawEarth()':<br />
-<font color="#0000ff">D:\Козлов Кирилл\проект\1 сцена\main.cpp:99:6: warning: no previous declaration for 'void drawEarth()' [-Wmissing-declarations]</font><br />
- void drawEarth()<br />
+D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawfire2(int, int)':<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:119:6: warning: no previous declaration for 'void drawfire2(int, int)' [-Wmissing-declarations]</font><br />
+ void drawfire2(int y,int x)<br />
       ^<br />
+D:\Козлов Кирилл\myproject-main\main.cpp: In function 'int main()':<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:202:15: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]</font><br />
+         rChel -= 0.01;<br />
+               ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:287:31: warning: right operand of comma operator has no effect [-Wunused-value]</font><br />
+             vzlet = vzlet -9,5;<br />
+                               ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:288:32: warning: right operand of comma operator has no effect [-Wunused-value]</font><br />
+             yFire = yFire - 9,5;<br />
+                                ^<br />
+<font color="#ff0000">D:\Козлов Кирилл\myproject-main\main.cpp:302:22: error: too many arguments to function 'void drawRocket2()'</font><br />
+     drawRocket2(xr,yr);<br />
+                      ^<br />
+D:\Козлов Кирилл\myproject-main\main.cpp:29:6: note: declared here<br />
+ void drawRocket2()<br />
+      ^<br />
+<font color="#ff0000">D:\Козлов Кирилл\myproject-main\main.cpp:303:18: error: 'ogrizok' was not declared in this scope</font><br />
+     ogrizok(xr,yr);<br />
+                  ^<br />
 ------------------------------------------------------------------------------------------------------<br />
-Autosaving to the Git repository in D:/ //1 /.git-auto/... <br />
-Output size is 2,25 MB<br />
-<font color="#0000ff">Process terminated with status 0 (0 minutes, 15 seconds)</font><br />
-<font color="#0000ff">0 errors, 10 warnings (0 minutes, 15 seconds)</font><br />
+Autosaving to the Git repository in D:/ /myproject-main/.git-auto/... <br />
+<font color="#a00000">Process terminated with status 1 (0 minutes, 5 seconds)</font><br />
+<font color="#a00000">7 errors, 15 warnings (0 minutes, 5 seconds)</font><br />
 </tt>
 </body>
 </html>
