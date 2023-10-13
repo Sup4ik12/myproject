@@ -56,31 +56,31 @@ void drawWindow(int x,int y)
         txSetFillColor(RGB(107, 199, 172));
         txCircle(x+650-610,y+225-460,30);
     }
-void drawAstronaft(int x,int aa,int color)
+void drawAstronaft(int x,int aa,int color,float r)
     {
         //человечек
-        txSetColor(TX_WHITE,13);
+        txSetColor(color,13*r);
         txSetFillColor(RGB(235, 206, 134));
-        txCircle(x+25,aa-28,20); //голова
-        txSetColor(color,8);
+        txCircle(x+25*r,aa-28*r,20*r); //голова
+        txSetColor(color,8*r);
         txSetFillColor(color);
-        txEllipse(x,aa,x+50,aa+102); //тело
-        txLine(x+35,aa+100,x+45,aa+158); //п нога
-        txLine(x+15,aa+94,x-5,aa+164); //л нога
-        txLine(x+45,aa+25,x+66,aa+74); //п рука
+        txEllipse(x,aa,x+50*r,aa+102*r); //тело
+        txLine(x+35*r,aa+100*r,x+45*r,aa+158*r); //п нога
+        txLine(x+15*r,aa+94*r,x-5*r,aa+164*r); //л нога
+        txLine(x+45*r,aa+25*r,x+66*r,aa+74*r); //п рука
 
         //лицо
-        txSetColor(TX_BLACK,3);
+        txSetColor(TX_BLACK,3*r);
         txSetFillColor(TX_BLACK);
-        txCircle(x+20,aa-31,1);
-        txCircle(x+31,aa+-31,1);
-        txArc (x+17, aa-31, x+35, aa-19, 180, 180); //рот
+        txCircle(x+20*r,aa-31*r,1*r);
+        txCircle(x+31*r,aa+-31*r,1*r);
+        txArc (x+17*r, aa-31*r, x+35*r, aa-19*r, 180, 180); //рот
     }
-void mahat(int a,int aa,int x,int color)
+void mahat(int a,int aa,int x,int color,float r)
     {
-        txSetColor(color,8);
+        txSetColor(color,8*r);
         txSetFillColor(color);
-        txLine(x,aa+10,x-18,a); //л рука
+        txLine(x,aa+10*r,x-18*r,a); //л рука
     }
 void drawElevator(int aa)
     {
@@ -129,6 +129,7 @@ txCreateWindow(800,600);
     int ychel = 350;
     int xchel = 470;
     int cChel = TX_WHITE;
+    float rChel = 1;
     int xBox = 475;
     int yFire = 380;
     int xFire = 585;
@@ -147,8 +148,9 @@ txCreateWindow(800,600);
     HDC Vishe = txLoadImage ("земл€чутьвыше.bmp");
     HDC chik = txLoadImage ("стыковка.bmp");
     HDC hello = txLoadImage ("прилетел.bmp");
+    HDC change = txLoadImage ("переодевалка.bmp");
 
-
+      /*
     //1 сцена
 
     //pука вверх
@@ -159,9 +161,9 @@ txCreateWindow(800,600);
         drawRocket(drozh,vzlet);
         drawWindow(drozh,vzlet);
         drawDvigatel(drozh,toplivo);
-        drawAstronaft(xchel,ychel,cChel);
+        drawAstronaft(xchel,ychel,cChel,rChel);
         drawElevator(ychel);
-        mahat(yarm,yarm1,xchel,cChel);
+        mahat(yarm,yarm1,xchel,cChel,rChel);
         yarm = yarm - 5;
         txSleep(15);
     }
@@ -169,14 +171,14 @@ txCreateWindow(800,600);
     while(yarm<426)
     {
         txBegin();
-        drawSky();\
+        drawSky();
         txBitBlt (txDC(), 0, 0, 800, 600, phone);
         drawRocket(drozh,vzlet);
         drawDvigatel(drozh,toplivo);
         drawWindow(drozh,vzlet);
-        drawAstronaft(xchel,ychel,cChel);
+        drawAstronaft(xchel,ychel,cChel,rChel);
         drawElevator(ychel);
-        mahat(yarm,yarm1,xchel,cChel);
+        mahat(yarm,yarm1,xchel,cChel,rChel);
         yarm = yarm + 5;
         txEnd();
         txSleep(15);
@@ -192,8 +194,8 @@ txCreateWindow(800,600);
         drawRocket(drozh,vzlet);
         drawDvigatel(drozh,toplivo);
         drawWindow(drozh,vzlet);
-        drawAstronaft(xchel,ychel,cChel);
-        mahat(yarm,yarm1,xchel,cChel);
+        drawAstronaft(xchel,ychel,cChel,rChel);
+        mahat(yarm,yarm1,xchel,cChel,rChel);
         drawElevator(ychel);
         ychel = ychel -2;
         yarm = yarm -2;
@@ -251,7 +253,7 @@ txCreateWindow(800,600);
             }
     //2 сцена
     drozh = 400;
-    vzlet = 1000;
+    vzlet = 1000;mahat(yarm,yarm1,xchel,cChel,rChel);
     toplivo = 1010;
     xFire = 375;
     yFire = 1000;
@@ -334,18 +336,47 @@ txCreateWindow(800,600);
             xr -= 7,5;
             txEnd;
             txSleep(15);
-        }
+        }   */
     //5 сцена
-    xchel=685;
+    rChel = 1.75;
+    xchel=635;
     ychel=375;
-    yarm=ychel;
-    yarm1=ychel;
-
+    yarm=ychel+126;
+    yarm1=ychel+25;
     cChel=RGB(74,97,251);
+
     txBitBlt (txDC(), 0, 0, 800, 600, hello);
-    drawAstronaft(xchel,ychel,cChel);           //—ƒ≈Ћј“№ –ј«ћ≈–
-    mahat(yarm,yarm1,xchel,cChel);
+    drawAstronaft(xchel,ychel,cChel,rChel);           //—ƒ≈Ћј“№ –ј«ћ≈–
+    mahat(yarm,yarm1,xchel,cChel,rChel);
     txSleep(3555);
+
+    //6 сцена
+    rChel = 1.3;
+    xchel = 400;
+    ychel = 250;
+    yarm=ychel+126;
+    yarm1=ychel+25;
+    while(rChel>0.00001)
+        {
+            txBegin();
+            txBitBlt (txDC(), 0, 0, 800, 600, change);
+            drawAstronaft(xchel,ychel,cChel,rChel);
+            mahat(yarm,yarm1,xchel,cChel,rChel);
+            rChel -= 0.07;
+            txEnd();
+            txSleep(15);
+        }
+    txSleep(333);
+    cChel = TX_WHITE;
+    while(rChel<1.35)
+        {
+            txBegin();
+            txBitBlt (txDC(), 0, 0, 800, 600, change);
+            drawAstronaft(xchel,ychel,cChel,rChel);
+            mahat(yarm,yarm1,xchel,cChel,rChel);
+            rChel += 0.07;
+            txEnd();
+        }
 
 
 txDeleteDC (phone);
@@ -353,6 +384,7 @@ txDeleteDC (Earth);
 txDeleteDC (Vishe);
 txDeleteDC (chik);
 txDeleteDC (hello);
+txDeleteDC (change);
 txTextCursor (false);
 return 0;
 }
