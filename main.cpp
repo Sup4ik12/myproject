@@ -66,85 +66,91 @@ void drawWindow(int x,int y)
 void drawAstronaft(int x,int y,int color,float r,double a, int yHand,int udi)
     {
         //человечек
-        int x1=x;
-        int y1=y;
+        int x1=x;      //470
+        int y1=y;      //350
         int x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,y2,y3,y4,y5,y6,y7,y8,y9,y10,y11,y12,y13,y14,y15;
-        x2=x1+25*cos((a)*3.14/180);
-        y2=y1-28*sin((a)*3.14/180);
+        x2=x1+12.8841*cos((a)*3.14/180);
+        y2=y1+12.8841*sin((a)*3.14/180);
 
-        x3=x1+35*cos((a)*3.14/180);
-        y3=y1+100*sin((a)*3.14/180);
+        x3=x1+10.4880884817*cos((a)*3.14/180);
+        y3=y1+10.4880884817*sin((a)*3.14/180);
 
-         x4=x1+45*cos((a)*3.14/180);
-        y4=y1+158*sin((a)*3.14/180);
+         x4=x1+12.08305*cos((a)*3.14/180);
+        y4=y1+12.08305*sin((a)*3.14/180);
 
-         x5=x1+15*cos((a)*3.14/180);
-        y5=y1+94*sin((a)*3.14/180);
+         x5=x1+7.61577*cos((a)*3.14/180);
+        y5=y1+7.61577*sin((a)*3.14/180);
 
-         x6=x1-5*cos((a)*3.14/180);
-        y6=y1+164*sin((a)*3.14/180);
+         x6=x1+12.56981*cos((a)*3.14/180);
+        y6=y1+12.56981*sin((a)*3.14/180);
 
-         x7=x1+45*cos((a)*3.14/180);
-        y7=y1+25*sin((a)*3.14/180);
+         x7=x1+4.47214*cos((a)*3.14/180);
+        y7=y1+4.47214*sin((a)*3.14/180);
 
-         x8=x1+66*cos((a)*3.14/180);
-        y8=y1+74*sin((a)*3.14/180);
+         x8=x1+10.95445*cos((a)*3.14/180);
+        y8=y1+10.95445*sin((a)*3.14/180);
 
-         x9=x1+20*cos((a)*3.14/180);
-        y9=y1-31*sin((a)*3.14/180);
+         x9=x1+13.49074*cos((a)*3.14/180);
+        y9=y1+13.49074*sin((a)*3.14/180);
 
-         x10=x1+31*cos((a)*3.14/180);
-        y10=y1-31*sin((a)*3.14/180);
+         x10=x1+12.64911*cos((a)*3.14/180);
+        y10=y1+12.64911*sin((a)*3.14/180);
 
-         x11=x1+17*cos((a)*3.14/180);
-        y11=y1-31*sin((a)*3.14/180);
+         x11=x1+13.71131*cos((a)*3.14/180);
+        y11=y1+13.71131*sin((a)*3.14/180);
 
-         x12=x1+35*cos((a)*3.14/180);
-        y12=y1-19*sin((a)*3.14/180);
+         x12=x1+11.31371*cos((a)*3.14/180);
+        y12=y1+11.31371*sin((a)*3.14/180);
 
-         x13=x1+10*cos((a)*3.14/180);
-        y13=y1+10*sin((a)*3.14/180);
+         x13=x1+10.95445*cos((a)*3.14/180);
+        y13=y1+10.95445*sin((a)*3.14/180);
 
-         x14=x1-18*cos((a)*3.14/180);
-        y14=y1-yHand+80*sin((a)*3.14/180);
+         x14=x1+6*cos((a)*3.14/180);
+        y14=y1+6*sin((a)*3.14/180);
 
         txSetColor(color,13*r);
         txSetFillColor(RGB(235, 206, 134));
-        txCircle(x2*r,y2*r,20*r); //голова
+        txCircle(x2+25*r,y2-28*r,20*r); //голова
         txSetColor(color,8*r);
         txSetFillColor(color);
         txEllipse(x-udi,y-udi,x+50*r-udi,y+102*r-udi); //тело
-        txLine(x3*r,y3*r,x4*r,y4*r); //п нога
-        txLine(x5*r,y5*r,x6*r,y6*r); //л нога
-        txLine(x7*r,y7*r,x8*r,y8*r); //п рука
+        txLine(x3+35*r,y3+100*r,x4+45*r,y4+158*r); //п нога
+        txLine(x5+15*r,y5+94*r,x6-5*r,y6+164*r); //л нога
+        txLine(x7+45*r,y7+25*r,x8+66*r,y8+74*r); //п рука
+        txSetPixel(x,y);
 
         //лицо
         txSetColor(TX_BLACK,3*r);
         txSetFillColor(TX_BLACK);
-        txCircle(x9*r,y9*r,1*r);
-        txCircle(x10*r,y10*r,1*r);
-        txArc (x11*r, y11*r, x12*r, y12*r, 180, 180); //рот
+        txCircle(x9+20*r,y9-31*r,1*r);
+        txCircle(x10+31*r,y10-31*r,1*r);
+        txArc (x11+17*r, y11-31*r, x12+35*r, y12-19*r, 180, 180); //рот
 
         txSetColor(color,8*r);
         txSetFillColor(color);
-        txLine(x13*r,y13*r,x14*r,y14*r); //л рука
+        txLine(x13+10*r,y13+10*r,x14-18*r,y14-yHand+80*r); //л рука
 
     }
 
-void drawSuit(int x,int y,int color,float r,double a)
+void drawSuit(int x,int y,int color,float r,double a,int udis)
     {
         int x1,x2,x3,x4,y1,y2,y3,y4;
 
-         x1=x*cos((a)*3.14/180);
-        y1=y*sin((a)*3.14/180);
+         x1=x+12.64911*cos((a)*3.14/180);
+        y1=y+12.64911*sin((a)*3.14/180);
 
-         x2=x+50*cos((a)*3.14/180);
-        y2=y+102*sin((a)*3.14/180);
+         x2=x+15.36229*cos((a)*3.14/180);
+        y2=y+15.36229*sin((a)*3.14/180);
 
+        x3=x+7.74597*cos((a)*3.14/180);
+        y3=y+7.74597*sin((a)*3.14/180);
+
+        x4=x+6.63325*cos((a)*3.14/180);
+        y4=y+6.63325*sin((a)*3.14/180);
 
         txSetColor(color,13*r);
-        txSetFillColor(RGB(235, 206, 134));
-        POINT suit[4]={{x1},{y1},{x2*r},{y2*r}};
+        txSetFillColor(color);
+        POINT suit[4]={{x1-udis,y1-udis},{x3+50-udis,y3-udis},{x2+50*r-udis,y2+102-udis},{x4-udis,y4+102-udis}};
         txPolygon(suit,4);
     }
 
@@ -201,6 +207,7 @@ txCreateWindow(800,600);
     float rChel = 1;
     int kChel=1;
     int udiChel = 0;
+    int udiSuit = 10000;
     int xBox = 475;
     int yFire = 380;
     int xFire = 585;
@@ -225,7 +232,7 @@ txCreateWindow(800,600);
 
     //1 сцена
     //pука вверх
-    while(yarm<100)
+  /*  while(yarm<100)
     {
         txBegin();
         drawSky();
@@ -432,9 +439,10 @@ txCreateWindow(800,600);
         txEnd();
         txSleep(15);
     }
-    txSleep(1500);
+    txSleep(1500);    */
     cChel = TX_WHITE;
     udiChel = 10000;
+    udiSuit = 0;
     while(rChel<1.35)
     {
         txBegin();
@@ -450,8 +458,8 @@ txCreateWindow(800,600);
             txBegin();
             txBitBlt (txDC(), 0, 0, 800, 600, mks);
             drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);
-            drawSuit(xchel,ychel,cChel,rChel,kChel);         //сделать чтоб крутился
-            kChel += 1;
+            drawSuit(xchel,ychel,cChel,rChel,kChel,udiSuit);         //сделать чтоб крутился
+            kChel += 10;
             txEnd();
             txSleep(15);
         }
