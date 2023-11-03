@@ -30,3 +30,36 @@ Run file:	D:\Кирилл\мои программы\ребенок\myproject-main\myproject-main\main.exe
 Directory:	D:\Кирилл\мои программы\ребенок\myproject-main\myproject-main
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Кирилл\мои программы\ребенок\myproject-main\main.exe, файл: d:\кирилл\кодеблокс\codeblocks\mingw\include\txlib.h, строка: 13113, функция: POINT {anonymous}::TX::txGetExtent(HDC),
+
+Сообщение: Обнаружен нулевой или ложный результат.
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-09-05 19:24:34 +0400], Instance: 0x004F62FC (32-bit), Flags: CMdRe0, Thread: 0x47CC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411CE6 in D:\Кирилл\мои программы\ребенок\myproject-main\main.exe: (anonymous namespace)::TX::txGetExtent()
+# 1 0x004164AD in D:\Кирилл\мои программы\ребенок\myproject-main\main.exe: (anonymous namespace)::TX::txBitBlt()
+# 2 0x0041F33D in D:\Кирилл\мои программы\ребенок\myproject-main\main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-09-05 19:24:34 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	d:\кирилл\кодеблокс\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 16 2023 18:22:10, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Oct 16 2023 18:30:29
+
+Run file:	D:\Кирилл\мои программы\ребенок\myproject-main\main.exe
+Directory:	D:\Кирилл\мои программы\ребенок\myproject-main
+
+--------------------------------------------------
