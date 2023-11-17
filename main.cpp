@@ -12,8 +12,8 @@ void drawSky()
 
 void drawSpace()
     {
-        txSetColor(RGB(19,3,112));
-        txSetFillColor(RGB(19,3,112));
+        txSetColor(TX_BLACK);
+        txSetFillColor(TX_BLACK);
         txRectangle(0,0,800,600);
         }
 
@@ -66,47 +66,50 @@ void drawWindow(int x,int y)
 void drawAstronaft(int x,int y,int color,float r,float a, int yHand,int udi)
     {
         //человечек
-        int x1=x;      //470
-        int y1=y;      //350
+        int x1=500;      //470
+        int y1=400;      //350
         int x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,y2,y3,y4,y5,y6,y7,y8,y9,y10,y11,y12,y13,y14,y15;
-        x2=x+(495-500)*r*cos(a)-(322-400)*r*sin(a);
-        y2=y+(495-500)*r*sin(a)+(322-400)*r*cos(a);
 
-        x3=x1+(x+35-500)*cos(a)-(y+100-400)*sin(a);
-        y3=y1+(x+35-500)*sin(a)+(y+100-400)*cos(a);
+        a=a*3.14/180;
 
-        x4=x1+(x+45-500)*cos(a)-(y+158-400)*sin(a);
-        y4=y1+(x+45-500)*sin(a)+(y+158-400)*cos(a);
+        x2=x1+(x+25-500)*r*cos(a)-(y-28-400)*r*sin(a);
+        y2=y1+(x+25-500)*r*sin(a)+(y-28-400)*r*cos(a);
 
-        x5=x1+(x+15-500)*cos(a)-(y+94-400)*sin(a);
-        y5=y1+(x+15-500)*sin(a)+(y+94-400)*cos(a);
+        x3=x1+(x+35-500)*r*cos(a)-(y+100-400)*r*sin(a);
+        y3=y1+(x+35-500)*r*sin(a)+(y+100-400)*r*cos(a);
 
-        x6=x1+(x-5-500)*cos(a)-(y+164-400)*sin(a);
-        y6=y1+(x-5-500)*sin(a)+(y+164-400)*cos(a);
+        x4=x1+(x+45-500)*r*cos(a)-(y+158-400)*r*sin(a);
+        y4=y1+(x+45-500)*r*sin(a)+(y+158-400)*r*cos(a);
 
-        x7=x1+(x+45-500)*cos(a)-(x+25-400)*sin(a);
-        y7=y1+(x+45-500)*sin(a)+(x+25-400)*cos(a);
+        x5=x1+(x+15-500)*r*cos(a)-(y+94-400)*r*sin(a);
+        y5=y1+(x+15-500)*r*sin(a)+(y+94-400)*r*cos(a);
 
-        x8=x1+(x+66-500)*cos(a)-(y+74-400)*sin(a);
-        y8=y1+(x+66-500)*sin(a)+(y+74-400)*cos(a);
+        x6=x1+(x-5-500)*r*cos(a)-(y+164-400)*r*sin(a);
+        y6=y1+(x-5-500)*r*sin(a)+(y+164-400)*r*cos(a);
 
-        x9=x1+(x+20-500)*cos(a)-(y-31-400)*sin(a);
-        y9=y1+(x+20-500)*sin(a)+(y-31-400)*cos(a);
+        x7=x1+(x+45-500)*r*cos(a)-(x+25-400)*r*sin(a);
+        y7=y1+(x+45-500)*r*sin(a)+(x+25-400)*r*cos(a);
 
-        x10=x1+(x+31-500)*cos(a)-(y-31-400)*sin(a);
-        y10=y1+(x+31-500)*sin(a)+(y-31-400)*cos(a);
+        x8=x1+(x+66-500)*r*cos(a)-(y+74-400)*r*sin(a);
+        y8=y1+(x+66-500)*r*sin(a)+(y+74-400)*r*cos(a);
 
-        x11=x1+(x+17-500)*cos(a)-(y-31-400)*sin(a);
-        y11=y1+(x+17-500)*sin(a)+(y-31-400)*cos(a);
+        x9=x1+(x+20-500)*r*cos(a)-(y-31-400)*r*sin(a);
+        y9=y1+(x+20-500)*r*sin(a)+(y-31-400)*r*cos(a);
 
-        x12=x1+(x+35-500)*cos(a)-(y-19-400)*sin(a);
-        y12=y1+(x+35-500)*sin(a)+(y-19-400)*cos(a);
+        x10=x1+(x+31-500)*r*cos(a)-(y-31-400)*r*sin(a);
+        y10=y1+(x+31-500)*r*sin(a)+(y-31-400)*r*cos(a);
 
-        x13=x1+(x+10-500)*cos(a)-(y+10-400)*sin(a);
-        y13=y1+(x+10-500)*sin(a)+(y+10-400)*cos(a);
+        x11=x1+(x+17-500)*r*cos(a)-(y-31-400)*r*sin(a);
+        y11=y1+(x+17-500)*r*sin(a)+(y-31-400)*r*cos(a);
 
-        x14=x1+(x-18-500)*cos(a)-(y+80-400)*sin(a);
-        y14=y1+(x-18-500)*sin(a)+(y+80-400)*cos(a);
+        x12=x1+(x+35-500)*r*cos(a)-(y-19-400)*r*sin(a);
+        y12=y1+(x+35-500)*r*sin(a)+(y-19-400)*r*cos(a);
+
+        x13=x1+(x+10-500)*r*cos(a)-(y+10-400)*sin(a);
+        y13=y1+(x+10-500)*r*sin(a)+(y+10-400)*cos(a);
+
+        x14=x1+(x-18-500)*r*cos(a)-(y+80-yHand-400)*r*sin(a);
+        y14=y1+(x-18-500)*r*sin(a)+(y+80-yHand-400)*r*cos(a);
 
 
 
@@ -116,43 +119,46 @@ void drawAstronaft(int x,int y,int color,float r,float a, int yHand,int udi)
         txSetColor(color,8*r);
         txSetFillColor(color);
         txEllipse(x-udi,y-udi,x+50*r-udi,y+102*r-udi); //тело
-        txLine(x3+35*r,y3+100*r,x4+45*r,y4+158*r); //п нога
-        txLine(x5+15*r,y5+94*r,x6-5*r,y6+164*r); //л нога
-        txLine(x7+45*r,y7+25*r,x8+66*r,y8+74*r); //п рука
+        txLine(x3,y3,x4,y4); //п нога
+        txLine(x5,y5,x6,y6); //л нога
+        txLine(x7,y7,x8,y8); //п рука
 
 
         //лицо
         txSetColor(TX_BLACK,3*r);
         txSetFillColor(TX_BLACK);
-        txCircle(x9+20*r,y9-31*r,1*r);
-        txCircle(x10+31*r,y10-31*r,1*r);
-        txArc (x11+17*r, y11-31*r, x12+35*r, y12-19*r, 180, 180); //рот
+        txCircle(x9,y9,1*r);
+        txCircle(x10,y10,1*r);
+        txArc (x11, y11, x12, y12, 180, 180); //рот
 
         txSetColor(color,8*r);
         txSetFillColor(color);
-        txLine(x13+10*r,y13+10*r,x14-18*r,y14-yHand+80*r); //л рука
+        txLine(x13,y13,x14,y14); //л рука
 
     }
 
 void drawSuit(int x,int y,int color,float r,double a,int udis)
-    {
+    {   int x0=500;
+        int y0=400;
+
         int x1,x2,x3,x4,y1,y2,y3,y4;
+        a=a*3.14/180;
 
-         x1=x1+(x-500)*cos(a)-(y-400)*sin(a);
-        y1=y1+(x-500)*sin(a)+(y-400)*cos(a);
+         x1=x0+(x-500)*r*cos(a)-(y-400)*r*sin(a);
+        y1=y0+(x-500)*r*sin(a)+(y-400)*r*cos(a);
 
-        x2=x1+(x+50-500)*cos(a)-(y+102-400)*sin(a);
-        y2=y1+(x+50-500)*sin(a)+(y+102-400)*cos(a);
+        x2=x0+(x+50-500)*r*cos(a)-(y+102-400)*r*sin(a);
+        y2=y0+(x+50-500)*r*sin(a)+(y+102-400)*r*cos(a);
 
-        x3=x1+(x+50-500)*cos(a)-(y-400)*sin(a);
-        y3=y1+(x+50-500)*sin(a)+(y-400)*cos(a);
+        x3=x0+(x+50-500)*r*cos(a)-(y-400)*r*sin(a);
+        y3=y0+(x+50-500)*r*sin(a)+(y-400)*r*cos(a);
 
-        x4=x1+(x-500)*cos(a)-(y+102-400)*sin(a);
-        y4=y1+(x-500)*sin(a)+(y+102-400)*cos(a);
+        x4=x0+(x-500)*r*cos(a)-(y+102-400)*r*sin(a);
+        y4=y0+(x-500)*r*sin(a)+(y+102-400)*r*cos(a);
 
         txSetColor(color,13*r);
         txSetFillColor(color);
-        POINT suit[4]={{x1-udis,y1-udis},{x3+50-udis,y3-udis},{x2+50*r-udis,y2+102-udis},{x4-udis,y4+102-udis}};
+        POINT suit[4]={{x1-udis,y1-udis},{x3-udis,y3-udis},{x2-udis,y2-udis},{x4-udis,y4-udis}};
         txPolygon(suit,4);
     }
 
@@ -196,6 +202,13 @@ void drawfire3(int x,int y)
         POINT fire3[10] = {{x,y},{x+50,y-20},{x+100,y-5},{x+50,y+5},{x+100,y+20},{x+45,y+30},{x+90,y+40},{x+50,y+50},{x+80,y+90},{x,y+55}};
         txPolygon (fire3,10);
     }
+void drawText(int x,int y,const char* text)
+    {
+     txSetColor(TX_WHITE);
+     txSetFillColor(TX_WHITE);
+     txSelectFont("Georgia",100);
+     txDrawText(x,y,x+566,y+145,text);
+    }
 
 
 
@@ -209,7 +222,7 @@ txCreateWindow(800,600);
     float rChel = 1;
     int kChel=0;
     int udiChel = 0;
-    int udiSuit = 10000;
+    int udiSuit = 0;
     int xBox = 475;
     int yFire = 380;
     int xFire = 585;
@@ -223,6 +236,9 @@ txCreateWindow(800,600);
     int yoguz = 280;
     int xfire3 = 1236;
     int yfire3 = 254;
+    int xtext = 100;
+    int ytext = 210;
+    const char* pismo = "ѕ–ќЎЋќ 5 ƒЌ≈…";
     HDC phone = txLoadImage ("самолет.bmp");
     HDC Earth = txLoadImage ("космос.bmp");
     HDC Vishe = txLoadImage ("земл€чутьвыше.bmp");
@@ -230,11 +246,12 @@ txCreateWindow(800,600);
     HDC hello = txLoadImage ("прилетел.bmp");
     HDC change = txLoadImage ("переодевалка.bmp");
     HDC mks = txLoadImage ("мкс.bmp");
+    HDC goodbye = txLoadImage ("улетел.bmp");
 
 
     //1 сцена
     //pука вверх
- /*   while(yarm<100)
+    while(yarm<100)
     {
         txBegin();
         drawSky();
@@ -418,11 +435,11 @@ txCreateWindow(800,600);
         xr -= 7,5;
         txEnd;
         txSleep(15);
-    }*/
+    }
     //5 сцена
     rChel = 1.75;
     xchel=635;
-    ychel=375;
+    ychel=375+150;
     cChel=RGB(74,97,251);
 
     txBitBlt (txDC(), 0, 0, 800, 600, hello);
@@ -432,7 +449,7 @@ txCreateWindow(800,600);
     //6 сцена
     rChel = 1.3;
     xchel = 400;
-    ychel = 250;
+    ychel = 250+150;
     while(rChel>0.00001)
     {
         txBegin();
@@ -446,27 +463,56 @@ txCreateWindow(800,600);
     cChel = TX_WHITE;
     udiChel = 10000;
     udiSuit = 0;
-    rChel = 0.4;
     while(rChel<1.35)
     {
         txBegin();
+        drawSky();
         txBitBlt (txDC(), 0, 0, 800, 600, change);
         drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);
+        drawSuit(xchel,ychel,cChel,rChel,kChel,udiSuit);
         rChel += 0.07;
         txSleep(15);
         txEnd();
     }
+    rChel=0.95;
 
     while(kChel<400)
         {
             txBegin();
+            drawSky();
             txBitBlt (txDC(), 0, 0, 800, 600, mks);
             drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);
             drawSuit(xchel,ychel,cChel,rChel,kChel,udiSuit);         //сделать чтоб крутилс€
-            kChel += 0.1;
+            kChel += 1;
             txEnd();
             txSleep(15);
         }
+    while(rChel>0.00001)
+        {
+            txBegin();
+            txBitBlt (txDC(), 0, 0, 800, 600, mks);
+            drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);
+            drawSuit(xchel,ychel,cChel,rChel,kChel,udiSuit);
+            rChel -= 0.07;
+            txEnd();
+            txSleep(15);
+        }
+    xchel=268;
+    ychel=310;
+    rChel=1;
+    kChel=0;
+
+    drawSpace();
+    drawText(xtext,ytext,pismo);
+    txSleep(2999);
+
+    txBitBlt (txDC(), 0, 0, 800, 600, goodbye);
+    drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);
+    drawSuit(xchel,ychel,cChel,rChel,kChel,udiSuit);
+    txSleep(2999);
+
+
+
 
 
 txDeleteDC (phone);
@@ -476,6 +522,7 @@ txDeleteDC (chik);
 txDeleteDC (hello);
 txDeleteDC (change);
 txDeleteDC (mks);
+txDeleteDC (goodbye);
 txTextCursor (false);
 return 0;
 }

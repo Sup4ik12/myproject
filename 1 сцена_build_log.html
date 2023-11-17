@@ -4,8 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body>
 <tt>
-Build started on: <u>03-11-2023 at 18:10.37</u><br />
-Build ended on: <u>03-11-2023 at 18:10.53</u><p />
+Build started on: <u>17-11-2023 at 18:32.22</u><br />
+Build ended on: <u>17-11-2023 at 18:32.40</u><p />
 <b>-------------- Build: Debug in 1 сцена (compiler: NOT FOR PROJECTS! = MinGW GCC + Strict + Fast + Save (Requires Git))---------------</b><br />
 g++git-auto.bat "D:\Козлов Кирилл\myproject-main\main.cpp" -o "bin\Debug\1 сцена.exe" -mwindows  -Wall -fexceptions  -g  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC<br />
 ------------------------------------------------------------------------------------------------------<br />
@@ -39,179 +39,254 @@ D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawWind
 <font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:58:6: warning: no previous declaration for 'void drawWindow(int, int)' [-Wmissing-declarations]</font><br />
  void drawWindow(int x,int y)<br />
       ^<br />
-D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawAstronaft(int, int, int, float, double, int, int)':<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:66:6: warning: no previous declaration for 'void drawAstronaft(int, int, int, float, double, int, int)' [-Wmissing-declarations]</font><br />
- void drawAstronaft(int x,int y,int color,float r,double a, int yHand,int udi)<br />
+D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawAstronaft(int, int, int, float, float, int, int)':<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:66:6: warning: no previous declaration for 'void drawAstronaft(int, int, int, float, float, int, int)' [-Wmissing-declarations]</font><br />
+ void drawAstronaft(int x,int y,int color,float r,float a, int yHand,int udi)<br />
       ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:72:14: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-         x2=x1+12.8841*cos((a)*3.14/180);<br />
-              ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:73:14: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-         y2=y1+12.8841*sin((a)*3.14/180);<br />
-              ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:75:14: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-         x3=x1+10.4880884817*cos((a)*3.14/180);<br />
-              ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:76:14: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-         y3=y1+10.4880884817*sin((a)*3.14/180);<br />
-              ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:78:15: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-          x4=x1+12.08305*cos((a)*3.14/180);<br />
-               ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:79:14: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-         y4=y1+12.08305*sin((a)*3.14/180);<br />
-              ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:81:15: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-          x5=x1+7.61577*cos((a)*3.14/180);<br />
-               ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:82:14: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-         y5=y1+7.61577*sin((a)*3.14/180);<br />
-              ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:84:15: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-          x6=x1+12.56981*cos((a)*3.14/180);<br />
-               ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:85:14: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-         y6=y1+12.56981*sin((a)*3.14/180);<br />
-              ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:87:15: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-          x7=x1+4.47214*cos((a)*3.14/180);<br />
-               ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:88:14: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-         y7=y1+4.47214*sin((a)*3.14/180);<br />
-              ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:90:15: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-          x8=x1+10.95445*cos((a)*3.14/180);<br />
-               ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:91:14: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-         y8=y1+10.95445*sin((a)*3.14/180);<br />
-              ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:93:15: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-          x9=x1+13.49074*cos((a)*3.14/180);<br />
-               ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:94:14: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-         y9=y1+13.49074*sin((a)*3.14/180);<br />
-              ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:96:16: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-          x10=x1+12.64911*cos((a)*3.14/180);<br />
-                ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:97:15: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-         y10=y1+12.64911*sin((a)*3.14/180);<br />
-               ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:99:16: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-          x11=x1+13.71131*cos((a)*3.14/180);<br />
-                ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:100:15: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-         y11=y1+13.71131*sin((a)*3.14/180);<br />
-               ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:102:16: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-          x12=x1+11.31371*cos((a)*3.14/180);<br />
-                ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:103:15: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-         y12=y1+11.31371*sin((a)*3.14/180);<br />
-               ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:105:16: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-          x13=x1+10.95445*cos((a)*3.14/180);<br />
-                ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:106:15: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-         y13=y1+10.95445*sin((a)*3.14/180);<br />
-               ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:108:16: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-          x14=x1+6*cos((a)*3.14/180);<br />
-                ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:109:15: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-         y14=y1+6*sin((a)*3.14/180);<br />
-               ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:73:17: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]</font><br />
+         a=a*3.14/180;<br />
+                 ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:75:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x2=x1+(x+25-500)*r*cos(a)-(y-28-400)*r*sin(a);<br />
+                    ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:75:40: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x2=x1+(x+25-500)*r*cos(a)-(y-28-400)*r*sin(a);<br />
+                                        ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:75:34: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         x2=x1+(x+25-500)*r*cos(a)-(y-28-400)*r*sin(a);<br />
+                                  ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:76:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y2=y1+(x+25-500)*r*sin(a)+(y-28-400)*r*cos(a);<br />
+                    ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:76:40: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y2=y1+(x+25-500)*r*sin(a)+(y-28-400)*r*cos(a);<br />
+                                        ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:76:34: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         y2=y1+(x+25-500)*r*sin(a)+(y-28-400)*r*cos(a);<br />
+                                  ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:78:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x3=x1+(x+35-500)*r*cos(a)-(y+100-400)*r*sin(a);<br />
+                    ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:78:41: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x3=x1+(x+35-500)*r*cos(a)-(y+100-400)*r*sin(a);<br />
+                                         ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:78:34: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         x3=x1+(x+35-500)*r*cos(a)-(y+100-400)*r*sin(a);<br />
+                                  ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:79:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y3=y1+(x+35-500)*r*sin(a)+(y+100-400)*r*cos(a);<br />
+                    ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:79:41: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y3=y1+(x+35-500)*r*sin(a)+(y+100-400)*r*cos(a);<br />
+                                         ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:79:34: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         y3=y1+(x+35-500)*r*sin(a)+(y+100-400)*r*cos(a);<br />
+                                  ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:81:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x4=x1+(x+45-500)*r*cos(a)-(y+158-400)*r*sin(a);<br />
+                    ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:81:41: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x4=x1+(x+45-500)*r*cos(a)-(y+158-400)*r*sin(a);<br />
+                                         ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:81:34: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         x4=x1+(x+45-500)*r*cos(a)-(y+158-400)*r*sin(a);<br />
+                                  ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:82:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y4=y1+(x+45-500)*r*sin(a)+(y+158-400)*r*cos(a);<br />
+                    ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:82:41: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y4=y1+(x+45-500)*r*sin(a)+(y+158-400)*r*cos(a);<br />
+                                         ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:82:34: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         y4=y1+(x+45-500)*r*sin(a)+(y+158-400)*r*cos(a);<br />
+                                  ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:84:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x5=x1+(x+15-500)*r*cos(a)-(y+94-400)*r*sin(a);<br />
+                    ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:84:40: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x5=x1+(x+15-500)*r*cos(a)-(y+94-400)*r*sin(a);<br />
+                                        ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:84:34: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         x5=x1+(x+15-500)*r*cos(a)-(y+94-400)*r*sin(a);<br />
+                                  ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:85:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y5=y1+(x+15-500)*r*sin(a)+(y+94-400)*r*cos(a);<br />
+                    ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:85:40: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y5=y1+(x+15-500)*r*sin(a)+(y+94-400)*r*cos(a);<br />
+                                        ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:85:34: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         y5=y1+(x+15-500)*r*sin(a)+(y+94-400)*r*cos(a);<br />
+                                  ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:87:19: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x6=x1+(x-5-500)*r*cos(a)-(y+164-400)*r*sin(a);<br />
+                   ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:87:40: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x6=x1+(x-5-500)*r*cos(a)-(y+164-400)*r*sin(a);<br />
+                                        ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:87:33: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         x6=x1+(x-5-500)*r*cos(a)-(y+164-400)*r*sin(a);<br />
+                                 ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:88:19: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y6=y1+(x-5-500)*r*sin(a)+(y+164-400)*r*cos(a);<br />
+                   ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:88:40: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y6=y1+(x-5-500)*r*sin(a)+(y+164-400)*r*cos(a);<br />
+                                        ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:88:33: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         y6=y1+(x-5-500)*r*sin(a)+(y+164-400)*r*cos(a);<br />
+                                 ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:90:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x7=x1+(x+45-500)*r*cos(a)-(x+25-400)*r*sin(a);<br />
+                    ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:90:40: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x7=x1+(x+45-500)*r*cos(a)-(x+25-400)*r*sin(a);<br />
+                                        ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:90:34: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         x7=x1+(x+45-500)*r*cos(a)-(x+25-400)*r*sin(a);<br />
+                                  ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:91:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y7=y1+(x+45-500)*r*sin(a)+(x+25-400)*r*cos(a);<br />
+                    ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:91:40: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y7=y1+(x+45-500)*r*sin(a)+(x+25-400)*r*cos(a);<br />
+                                        ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:91:34: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         y7=y1+(x+45-500)*r*sin(a)+(x+25-400)*r*cos(a);<br />
+                                  ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:93:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x8=x1+(x+66-500)*r*cos(a)-(y+74-400)*r*sin(a);<br />
+                    ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:93:40: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x8=x1+(x+66-500)*r*cos(a)-(y+74-400)*r*sin(a);<br />
+                                        ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:93:34: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         x8=x1+(x+66-500)*r*cos(a)-(y+74-400)*r*sin(a);<br />
+                                  ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:94:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y8=y1+(x+66-500)*r*sin(a)+(y+74-400)*r*cos(a);<br />
+                    ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:94:40: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y8=y1+(x+66-500)*r*sin(a)+(y+74-400)*r*cos(a);<br />
+                                        ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:94:34: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         y8=y1+(x+66-500)*r*sin(a)+(y+74-400)*r*cos(a);<br />
+                                  ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:96:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x9=x1+(x+20-500)*r*cos(a)-(y-31-400)*r*sin(a);<br />
+                    ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:96:40: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x9=x1+(x+20-500)*r*cos(a)-(y-31-400)*r*sin(a);<br />
+                                        ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:96:34: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         x9=x1+(x+20-500)*r*cos(a)-(y-31-400)*r*sin(a);<br />
+                                  ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:97:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y9=y1+(x+20-500)*r*sin(a)+(y-31-400)*r*cos(a);<br />
+                    ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:97:40: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y9=y1+(x+20-500)*r*sin(a)+(y-31-400)*r*cos(a);<br />
+                                        ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:97:34: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         y9=y1+(x+20-500)*r*sin(a)+(y-31-400)*r*cos(a);<br />
+                                  ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:99:21: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x10=x1+(x+31-500)*r*cos(a)-(y-31-400)*r*sin(a);<br />
+                     ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:99:41: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x10=x1+(x+31-500)*r*cos(a)-(y-31-400)*r*sin(a);<br />
+                                         ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:99:35: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         x10=x1+(x+31-500)*r*cos(a)-(y-31-400)*r*sin(a);<br />
+                                   ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:100:21: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y10=y1+(x+31-500)*r*sin(a)+(y-31-400)*r*cos(a);<br />
+                     ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:100:41: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y10=y1+(x+31-500)*r*sin(a)+(y-31-400)*r*cos(a);<br />
+                                         ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:100:35: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         y10=y1+(x+31-500)*r*sin(a)+(y-31-400)*r*cos(a);<br />
+                                   ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:102:21: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x11=x1+(x+17-500)*r*cos(a)-(y-31-400)*r*sin(a);<br />
+                     ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:102:41: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x11=x1+(x+17-500)*r*cos(a)-(y-31-400)*r*sin(a);<br />
+                                         ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:102:35: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         x11=x1+(x+17-500)*r*cos(a)-(y-31-400)*r*sin(a);<br />
+                                   ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:103:21: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y11=y1+(x+17-500)*r*sin(a)+(y-31-400)*r*cos(a);<br />
+                     ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:103:41: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y11=y1+(x+17-500)*r*sin(a)+(y-31-400)*r*cos(a);<br />
+                                         ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:103:35: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         y11=y1+(x+17-500)*r*sin(a)+(y-31-400)*r*cos(a);<br />
+                                   ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:105:21: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x12=x1+(x+35-500)*r*cos(a)-(y-19-400)*r*sin(a);<br />
+                     ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:105:41: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x12=x1+(x+35-500)*r*cos(a)-(y-19-400)*r*sin(a);<br />
+                                         ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:105:35: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         x12=x1+(x+35-500)*r*cos(a)-(y-19-400)*r*sin(a);<br />
+                                   ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:106:21: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y12=y1+(x+35-500)*r*sin(a)+(y-19-400)*r*cos(a);<br />
+                     ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:106:41: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y12=y1+(x+35-500)*r*sin(a)+(y-19-400)*r*cos(a);<br />
+                                         ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:106:35: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         y12=y1+(x+35-500)*r*sin(a)+(y-19-400)*r*cos(a);<br />
+                                   ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:108:21: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x13=x1+(x+10-500)*r*cos(a)-(y+10-400)*sin(a);<br />
+                     ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:108:35: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         x13=x1+(x+10-500)*r*cos(a)-(y+10-400)*sin(a);<br />
+                                   ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:109:21: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y13=y1+(x+10-500)*r*sin(a)+(y+10-400)*cos(a);<br />
+                     ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:109:35: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         y13=y1+(x+10-500)*r*sin(a)+(y+10-400)*cos(a);<br />
+                                   ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:111:21: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x14=x1+(x-18-500)*r*cos(a)-(y+80-yHand-400)*r*sin(a);<br />
+                     ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:111:47: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x14=x1+(x-18-500)*r*cos(a)-(y+80-yHand-400)*r*sin(a);<br />
+                                               ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:111:35: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         x14=x1+(x-18-500)*r*cos(a)-(y+80-yHand-400)*r*sin(a);<br />
+                                   ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:112:21: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y14=y1+(x-18-500)*r*sin(a)+(y+80-yHand-400)*r*cos(a);<br />
+                     ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:112:47: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y14=y1+(x-18-500)*r*sin(a)+(y+80-yHand-400)*r*cos(a);<br />
+                                               ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:112:35: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         y14=y1+(x-18-500)*r*sin(a)+(y+80-yHand-400)*r*cos(a);<br />
+                                   ^<br />
 In file included from D:\Козлов Кирилл\myproject-main\main.cpp:1:0:<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:113:24: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         txCircle(x2+25*r,y2-28*r,20*r); //голова<br />
-                        ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:113:32: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         txCircle(x2+25*r,y2-28*r,20*r); //голова<br />
-                                ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:116:36: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:121:36: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
          txEllipse(x-udi,y-udi,x+50*r-udi,y+102*r-udi); //тело<br />
                                     ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:116:38: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:121:38: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
          txEllipse(x-udi,y-udi,x+50*r-udi,y+102*r-udi); //тело<br />
                                       ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:116:48: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:121:48: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
          txEllipse(x-udi,y-udi,x+50*r-udi,y+102*r-udi); //тело<br />
                                                 ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:116:50: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:121:50: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
          txEllipse(x-udi,y-udi,x+50*r-udi,y+102*r-udi); //тело<br />
                                                   ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:117:22: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         txLine(x3+35*r,y3+100*r,x4+45*r,y4+158*r); //п нога<br />
-                      ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:117:31: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         txLine(x3+35*r,y3+100*r,x4+45*r,y4+158*r); //п нога<br />
-                               ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:117:39: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         txLine(x3+35*r,y3+100*r,x4+45*r,y4+158*r); //п нога<br />
-                                       ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:117:48: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         txLine(x3+35*r,y3+100*r,x4+45*r,y4+158*r); //п нога<br />
-                                                ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:118:22: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         txLine(x5+15*r,y5+94*r,x6-5*r,y6+164*r); //л нога<br />
-                      ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:118:30: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         txLine(x5+15*r,y5+94*r,x6-5*r,y6+164*r); //л нога<br />
-                              ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:118:37: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         txLine(x5+15*r,y5+94*r,x6-5*r,y6+164*r); //л нога<br />
-                                     ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:118:46: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         txLine(x5+15*r,y5+94*r,x6-5*r,y6+164*r); //л нога<br />
-                                              ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:119:22: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         txLine(x7+45*r,y7+25*r,x8+66*r,y8+74*r); //п рука<br />
-                      ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:119:30: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         txLine(x7+45*r,y7+25*r,x8+66*r,y8+74*r); //п рука<br />
-                              ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:119:38: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         txLine(x7+45*r,y7+25*r,x8+66*r,y8+74*r); //п рука<br />
-                                      ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:119:46: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         txLine(x7+45*r,y7+25*r,x8+66*r,y8+74*r); //п рука<br />
-                                              ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:124:24: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         txCircle(x9+20*r,y9-31*r,1*r);<br />
-                        ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:124:32: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         txCircle(x9+20*r,y9-31*r,1*r);<br />
-                                ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:125:25: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         txCircle(x10+31*r,y10-31*r,1*r);<br />
-                         ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:125:34: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         txCircle(x10+31*r,y10-31*r,1*r);<br />
-                                  ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:126:23: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         txArc (x11+17*r, y11-31*r, x12+35*r, y12-19*r, 180, 180); //рот<br />
-                       ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:126:33: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         txArc (x11+17*r, y11-31*r, x12+35*r, y12-19*r, 180, 180); //рот<br />
-                                 ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:126:43: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         txArc (x11+17*r, y11-31*r, x12+35*r, y12-19*r, 180, 180); //рот<br />
-                                           ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:126:53: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         txArc (x11+17*r, y11-31*r, x12+35*r, y12-19*r, 180, 180); //рот<br />
-                                                     ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:130:23: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         txLine(x13+10*r,y13+10*r,x14-18*r,y14-yHand+80*r); //л рука<br />
-                       ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:130:32: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         txLine(x13+10*r,y13+10*r,x14-18*r,y14-yHand+80*r); //л рука<br />
-                                ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:130:41: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         txLine(x13+10*r,y13+10*r,x14-18*r,y14-yHand+80*r); //л рука<br />
-                                         ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:130:46: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         txLine(x13+10*r,y13+10*r,x14-18*r,y14-yHand+80*r); //л рука<br />
-                                              ^<br />
 <font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:71:57: warning: unused variable 'x15' [-Wunused-variable]</font><br />
          int x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,y2,y3,y4,y5,y6,y7,y8,y9,y10,y11,y12,y13,y14,y15;<br />
                                                          ^<br />
@@ -219,108 +294,174 @@ In file included from D:\Козлов Кирилл\myproject-main\main.cpp:1:0:<
          int x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,y2,y3,y4,y5,y6,y7,y8,y9,y10,y11,y12,y13,y14,y15;<br />
                                                                                                          ^<br />
 D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawSuit(int, int, int, float, double, int)':<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:134:6: warning: no previous declaration for 'void drawSuit(int, int, int, float, double, int)' [-Wmissing-declarations]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:140:6: warning: no previous declaration for 'void drawSuit(int, int, int, float, double, int)' [-Wmissing-declarations]</font><br />
  void drawSuit(int x,int y,int color,float r,double a,int udis)<br />
       ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:138:14: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-          x1=x+12.64911*cos((a)*3.14/180);<br />
-              ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:139:13: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-         y1=y+12.64911*sin((a)*3.14/180);<br />
-             ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:141:14: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-          x2=x+15.36229*cos((a)*3.14/180);<br />
-              ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:142:13: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-         y2=y+15.36229*sin((a)*3.14/180);<br />
-             ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:144:13: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-         x3=x+7.74597*cos((a)*3.14/180);<br />
-             ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:145:13: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-         y3=y+7.74597*sin((a)*3.14/180);<br />
-             ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:147:13: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-         x4=x+6.63325*cos((a)*3.14/180);<br />
-             ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:148:13: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
-         y4=y+6.63325*sin((a)*3.14/180);<br />
-             ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:152:70: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         POINT suit[4]={{x1-udis,y1-udis},{x3+50-udis,y3-udis},{x2+50*r-udis,y2+102-udis},{x4-udis,y4+102-udis}};<br />
-                                                                      ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:152:72: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         POINT suit[4]={{x1-udis,y1-udis},{x3+50-udis,y3-udis},{x2+50*r-udis,y2+102-udis},{x4-udis,y4+102-udis}};<br />
-                                                                        ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:152:71: warning: narrowing conversion of '(((float)x2 + (r * 5.0e+1f)) - (float)udis)' from 'float' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
-         POINT suit[4]={{x1-udis,y1-udis},{x3+50-udis,y3-udis},{x2+50*r-udis,y2+102-udis},{x4-udis,y4+102-udis}};<br />
-                                                                       ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:152:71: warning: conversion to 'LONG {aka long int}' from 'float' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:147:18: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+          x1=x0+(x-500)*r*cos(a)-(y-400)*r*sin(a);<br />
+                  ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:147:35: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+          x1=x0+(x-500)*r*cos(a)-(y-400)*r*sin(a);<br />
+                                   ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:147:32: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+          x1=x0+(x-500)*r*cos(a)-(y-400)*r*sin(a);<br />
+                                ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:148:17: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y1=y0+(x-500)*r*sin(a)+(y-400)*r*cos(a);<br />
+                 ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:148:34: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y1=y0+(x-500)*r*sin(a)+(y-400)*r*cos(a);<br />
+                                  ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:148:31: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         y1=y0+(x-500)*r*sin(a)+(y-400)*r*cos(a);<br />
+                               ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:150:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x2=x0+(x+50-500)*r*cos(a)-(y+102-400)*r*sin(a);<br />
+                    ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:150:41: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x2=x0+(x+50-500)*r*cos(a)-(y+102-400)*r*sin(a);<br />
+                                         ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:150:34: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         x2=x0+(x+50-500)*r*cos(a)-(y+102-400)*r*sin(a);<br />
+                                  ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:151:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y2=y0+(x+50-500)*r*sin(a)+(y+102-400)*r*cos(a);<br />
+                    ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:151:41: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y2=y0+(x+50-500)*r*sin(a)+(y+102-400)*r*cos(a);<br />
+                                         ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:151:34: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         y2=y0+(x+50-500)*r*sin(a)+(y+102-400)*r*cos(a);<br />
+                                  ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:153:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x3=x0+(x+50-500)*r*cos(a)-(y-400)*r*sin(a);<br />
+                    ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:153:37: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x3=x0+(x+50-500)*r*cos(a)-(y-400)*r*sin(a);<br />
+                                     ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:153:34: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         x3=x0+(x+50-500)*r*cos(a)-(y-400)*r*sin(a);<br />
+                                  ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:154:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y3=y0+(x+50-500)*r*sin(a)+(y-400)*r*cos(a);<br />
+                    ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:154:37: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y3=y0+(x+50-500)*r*sin(a)+(y-400)*r*cos(a);<br />
+                                     ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:154:34: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         y3=y0+(x+50-500)*r*sin(a)+(y-400)*r*cos(a);<br />
+                                  ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:156:17: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x4=x0+(x-500)*r*cos(a)-(y+102-400)*r*sin(a);<br />
+                 ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:156:38: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         x4=x0+(x-500)*r*cos(a)-(y+102-400)*r*sin(a);<br />
+                                      ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:156:31: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         x4=x0+(x-500)*r*cos(a)-(y+102-400)*r*sin(a);<br />
+                               ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:157:17: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y4=y0+(x-500)*r*sin(a)+(y+102-400)*r*cos(a);<br />
+                 ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:157:38: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         y4=y0+(x-500)*r*sin(a)+(y+102-400)*r*cos(a);<br />
+                                      ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:157:31: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         y4=y0+(x-500)*r*sin(a)+(y+102-400)*r*cos(a);<br />
+                               ^<br />
 D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawElevator(int)':<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:156:6: warning: no previous declaration for 'void drawElevator(int)' [-Wmissing-declarations]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:165:6: warning: no previous declaration for 'void drawElevator(int)' [-Wmissing-declarations]</font><br />
  void drawElevator(int aa)<br />
       ^<br />
 D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawBox(int)':<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:166:6: warning: no previous declaration for 'void drawBox(int)' [-Wmissing-declarations]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:175:6: warning: no previous declaration for 'void drawBox(int)' [-Wmissing-declarations]</font><br />
  void drawBox(int b)<br />
       ^<br />
 D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawfire(int, int)':<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:173:6: warning: no previous declaration for 'void drawfire(int, int)' [-Wmissing-declarations]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:182:6: warning: no previous declaration for 'void drawfire(int, int)' [-Wmissing-declarations]</font><br />
  void drawfire(int d,int r)<br />
       ^<br />
 D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawfire2(int, int)':<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:181:6: warning: no previous declaration for 'void drawfire2(int, int)' [-Wmissing-declarations]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:190:6: warning: no previous declaration for 'void drawfire2(int, int)' [-Wmissing-declarations]</font><br />
  void drawfire2(int y,int x)<br />
       ^<br />
 D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawfire3(int, int)':<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:189:6: warning: no previous declaration for 'void drawfire3(int, int)' [-Wmissing-declarations]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:198:6: warning: no previous declaration for 'void drawfire3(int, int)' [-Wmissing-declarations]</font><br />
  void drawfire3(int x,int y)<br />
       ^<br />
+D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawText(int, int, const char*)':<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:205:6: warning: no previous declaration for 'void drawText(int, int, const char*)' [-Wmissing-declarations]</font><br />
+ void drawText(int x,int y,const char* text)<br />
+      ^<br />
 D:\Козлов Кирилл\myproject-main\main.cpp: In function 'int main()':<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:450:15: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:262:65: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);<br />
+                                                                 ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:279:65: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);<br />
+                                                                 ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:298:65: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);<br />
+                                                                 ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:386:27: warning: right operand of comma operator has no effect [-Wunused-value]</font><br />
+         vzlet = vzlet -9,5;<br />
+                           ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:387:28: warning: right operand of comma operator has no effect [-Wunused-value]</font><br />
+         yFire = yFire - 9,5;<br />
+                            ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:407:14: warning: statement has no effect [-Wunused-value]</font><br />
+         txEnd;<br />
+              ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:420:21: warning: right operand of comma operator has no effect [-Wunused-value]</font><br />
+         yoguz += 1,5;<br />
+                     ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:423:14: warning: statement has no effect [-Wunused-value]</font><br />
+         txEnd;<br />
+              ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:435:18: warning: right operand of comma operator has no effect [-Wunused-value]</font><br />
+         xr -= 7,5;<br />
+                  ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:436:14: warning: statement has no effect [-Wunused-value]</font><br />
+         txEnd;<br />
+              ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:446:61: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+     drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);<br />
+                                                             ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:450:11: warning: conversion to 'float' alters 'double' constant value [-Wconversion]</font><br />
+     rChel = 1.3;<br />
+           ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:457:65: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);<br />
+                                                                 ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:458:15: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]</font><br />
+         rChel -= 0.07;<br />
+               ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:471:65: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);<br />
+                                                                 ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:473:15: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]</font><br />
          rChel += 0.07;<br />
                ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:210:9: warning: unused variable 'xBox' [-Wunused-variable]</font><br />
-     int xBox = 475;<br />
-         ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:211:9: warning: unused variable 'yFire' [-Wunused-variable]</font><br />
-     int yFire = 380;<br />
-         ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:212:9: warning: unused variable 'xFire' [-Wunused-variable]</font><br />
-     int xFire = 585;<br />
-         ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:213:9: warning: unused variable 'drozh' [-Wunused-variable]</font><br />
-     int drozh = 610;<br />
-         ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:215:9: warning: unused variable 'xdvigatel' [-Wunused-variable]</font><br />
-     int xdvigatel = 610;<br />
-         ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:216:9: warning: unused variable 'toplivo' [-Wunused-variable]</font><br />
-     int toplivo = vzlet+5;<br />
-         ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:217:9: warning: unused variable 'xr' [-Wunused-variable]</font><br />
-     int xr = 1000;<br />
-         ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:218:9: warning: unused variable 'yr' [-Wunused-variable]</font><br />
-     int yr = 280;<br />
-         ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:219:9: warning: unused variable 'xoguz' [-Wunused-variable]</font><br />
-     int xoguz = 1000;<br />
-         ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:220:9: warning: unused variable 'yoguz' [-Wunused-variable]</font><br />
-     int yoguz = 280;<br />
-         ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:221:9: warning: unused variable 'xfire3' [-Wunused-variable]</font><br />
-     int xfire3 = 1236;<br />
-         ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:222:9: warning: unused variable 'yfire3' [-Wunused-variable]</font><br />
-     int yfire3 = 254;<br />
-         ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:477:10: warning: conversion to 'float' alters 'double' constant value [-Wconversion]</font><br />
+     rChel=0.95;<br />
+          ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:484:69: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+             drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);<br />
+                                                                     ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:494:69: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+             drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);<br />
+                                                                     ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:496:19: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]</font><br />
+             rChel -= 0.07;<br />
+                   ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:510:61: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+     drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);<br />
+                                                             ^<br />
 ------------------------------------------------------------------------------------------------------<br />
 Autosaving to the Git repository in D:/ /myproject-main/.git-auto/... <br />
-Output size is 2,25 MB<br />
-<font color="#0000ff">Process terminated with status 0 (0 minutes, 16 seconds)</font><br />
-<font color="#0000ff">0 errors, 97 warnings (0 minutes, 16 seconds)</font><br />
+Output size is 2,26 MB<br />
+<font color="#0000ff">Process terminated with status 0 (0 minutes, 18 seconds)</font><br />
+<font color="#0000ff">0 errors, 143 warnings (0 minutes, 18 seconds)</font><br />
 </tt>
 </body>
 </html>
