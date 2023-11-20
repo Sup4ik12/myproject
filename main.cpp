@@ -202,11 +202,11 @@ void drawfire3(int x,int y)
         POINT fire3[10] = {{x,y},{x+50,y-20},{x+100,y-5},{x+50,y+5},{x+100,y+20},{x+45,y+30},{x+90,y+40},{x+50,y+50},{x+80,y+90},{x,y+55}};
         txPolygon (fire3,10);
     }
-void drawText(int x,int y,const char* text)
+void drawText(int x,int y,const char* text,int razm)
     {
      txSetColor(TX_WHITE);
      txSetFillColor(TX_WHITE);
-     txSelectFont("Georgia",100);
+     txSelectFont("Georgia",razm);
      txDrawText(x,y,x+566,y+145,text);
     }
 
@@ -217,7 +217,7 @@ int main()
 txCreateWindow(800,600);
     int yarm = 0;
     int ychel = 400;
-    int xchel = 500;
+    int xchel = 470;
     int cChel = TX_WHITE;
     float rChel = 1;
     int kChel=0;
@@ -238,6 +238,7 @@ txCreateWindow(800,600);
     int yfire3 = 254;
     int xtext = 100;
     int ytext = 210;
+    int razmtext = 70;
     const char* pismo = "ПРОШЛО 5 ДНЕЙ";
     HDC phone = txLoadImage ("самолет.bmp");
     HDC Earth = txLoadImage ("космос.bmp");
@@ -267,7 +268,7 @@ txCreateWindow(800,600);
         txSleep(15);
     }
 
-    //рука вниз
+   /* //рука вниз
     while(yarm>0)
     {
         txBegin();
@@ -438,17 +439,17 @@ txCreateWindow(800,600);
     }
     //5 сцена
     rChel = 1.75;
-    xchel=635;
+    xchel=635-30;
     ychel=375+150;
     cChel=RGB(74,97,251);
 
     txBitBlt (txDC(), 0, 0, 800, 600, hello);
     drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);
     txSleep(3555);
-
+*/
     //6 сцена
     rChel = 1.3;
-    xchel = 400;
+    xchel = 400-30;
     ychel = 250+150;
     while(rChel>0.00001)
     {
@@ -474,7 +475,7 @@ txCreateWindow(800,600);
         txSleep(15);
         txEnd();
     }
-    rChel=0.95;
+    rChel=0.65;
 
     while(kChel<400)
         {
@@ -503,7 +504,7 @@ txCreateWindow(800,600);
     kChel=0;
 
     drawSpace();
-    drawText(xtext,ytext,pismo);
+    drawText(xtext,ytext,pismo,razmtext);
     txSleep(2999);
 
     txBitBlt (txDC(), 0, 0, 800, 600, goodbye);
