@@ -87,8 +87,8 @@ void drawAstronaft(int x,int y,int color,float r,float a, int yHand,int udi)
         x6=x1+(x-5-500)*r*cos(a)-(y+164-400)*r*sin(a);
         y6=y1+(x-5-500)*r*sin(a)+(y+164-400)*r*cos(a);
 
-        x7=x1+(x+45-500)*r*cos(a)-(x+25-400)*r*sin(a);
-        y7=y1+(x+45-500)*r*sin(a)+(x+25-400)*r*cos(a);
+        x7=x1+(x+45-500)*r*cos(a)-(y+25-400)*r*sin(a);
+        y7=y1+(x+45-500)*r*sin(a)+(y+25-400)*r*cos(a);
 
         x8=x1+(x+66-500)*r*cos(a)-(y+74-400)*r*sin(a);
         y8=y1+(x+66-500)*r*sin(a)+(y+74-400)*r*cos(a);
@@ -210,6 +210,14 @@ void drawText(int x,int y,const char* text,int razm)
      txDrawText(x,y,x+566,y+145,text);
     }
 
+void drawCapsula(int x,int y,float r)
+    {
+        txSetColor(RGB(84, 31, 31));
+        txSetFillColor(RGB(84, 31, 31));
+        txRectangle(x,y,x+100*r,y+50*r);
+        txCircle(x+50*r,y,50*r);
+    }
+
 
 
 int main()
@@ -223,6 +231,9 @@ txCreateWindow(800,600);
     int kChel=0;
     int udiChel = 0;
     int udiSuit = 0;
+    int xCapsul = 200;
+    int yCapsul = 150;
+    float rCapsul = 1;
     int xBox = 475;
     int yFire = 380;
     int xFire = 585;
@@ -248,6 +259,8 @@ txCreateWindow(800,600);
     HDC change = txLoadImage ("переодевалка.bmp");
     HDC mks = txLoadImage ("мкс.bmp");
     HDC goodbye = txLoadImage ("улетел.bmp");
+    HDC pochtiprivet = txLoadImage ("прилет.bmp");
+    HDC chutprivet = txLoadImage ("приземлет.bmp");
 
 
     //1 сцена
@@ -304,7 +317,7 @@ txCreateWindow(800,600);
     }
       txSleep(150);
 
-      //упаковка чебурка
+      //упаковка чебуркаrgb(84, 31, 31)
     while(xBox<600)
     {
         txBegin();
@@ -437,7 +450,7 @@ txCreateWindow(800,600);
         txEnd;
         txSleep(15);
     }
-    //5 сцена
+    //5 сцена*/
     rChel = 1.75;
     xchel=635-30;
     ychel=375+150;
@@ -446,12 +459,12 @@ txCreateWindow(800,600);
     txBitBlt (txDC(), 0, 0, 800, 600, hello);
     drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);
     txSleep(3555);
-*/
+
     //6 сцена
-    rChel = 1.3;
-    xchel = 400-30;
-    ychel = 250+150;
-    while(rChel>0.00001)
+    rChel = 1;
+    xchel = 650;
+    ychel = 500;
+    while(rChel>0.00000000000000000001)
     {
         txBegin();
         txBitBlt (txDC(), 0, 0, 800, 600, change);
@@ -488,7 +501,7 @@ txCreateWindow(800,600);
             txEnd();
             txSleep(15);
         }
-    while(rChel>0.00001)
+    while(rChel>0.000000000001)
         {
             txBegin();
             txBitBlt (txDC(), 0, 0, 800, 600, mks);
@@ -498,8 +511,8 @@ txCreateWindow(800,600);
             txEnd();
             txSleep(15);
         }
-    xchel=268;
-    ychel=310;
+    xchel=247;
+    ychel=260;
     rChel=1;
     kChel=0;
 
@@ -512,7 +525,31 @@ txCreateWindow(800,600);
     drawSuit(xchel,ychel,cChel,rChel,kChel,udiSuit);
     txSleep(2999);
 
+    while(xCapsul<650)
+        {
+            txBegin();
+            txBitBlt (txDC(), 0, 0, 800, 600, pochtiprivet);
+            drawCapsula(xCapsul,yCapsul,rCapsul);
+            xCapsul += 3;
+            yCapsul +=1;
+            rCapsul -= 0.007;
+            txEnd();
+            txSleep(15);
+        }
+xCapsul=800;
+yCapsul=0;
 
+    while(rCapsul<0.5)
+        {
+                txBegin();
+                txBitBlt (txDC(), 0, 0, 800, 600, chutprivet);
+                drawCapsula(xCapsul,yCapsul,rCapsul);
+                xCapsul -= 4;
+                yCapsul +=1;
+                rCapsul += 0.006;
+                txEnd();
+                txSleep(15);
+        }
 
 
 
@@ -524,6 +561,8 @@ txDeleteDC (hello);
 txDeleteDC (change);
 txDeleteDC (mks);
 txDeleteDC (goodbye);
+txDeleteDC (pochtiprivet);
+txDeleteDC (chutprivet);
 txTextCursor (false);
 return 0;
 }
