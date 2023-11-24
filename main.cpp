@@ -579,7 +579,7 @@ yCapsul=150;
         txBitBlt (txDC(), 0, 0, 800, 600, PRIVET);
         drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);
         drawSuit(xchel,ychel,cChel,rChel,kChel,udiSuit);
-        ychel -= 1;
+        ychel -= 2;
         txEnd();
         txSleep(15);
     }
