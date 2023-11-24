@@ -209,13 +209,16 @@ void drawText(int x,int y,const char* text,int razm)
      txSelectFont("Georgia",razm);
      txDrawText(x,y,x+566,y+145,text);
     }
-
 void drawCapsula(int x,int y,float r)
     {
         txSetColor(RGB(84, 31, 31));
         txSetFillColor(RGB(84, 31, 31));
         txRectangle(x,y,x+100*r,y+50*r);
         txCircle(x+50*r,y,50*r);
+    }
+void drawKabum(float razm,HDC cabum)
+    {
+        Win32::TransparentBlt (txDC(), 250, 225, 415*razm, 295*razm, cabum,0,0, 400, 280, TX_WHITE);
     }
 
 
@@ -250,6 +253,7 @@ txCreateWindow(800,600);
     int xtext = 100;
     int ytext = 210;
     int razmtext = 70;
+    float rKabum = 1;
     const char* pismo = "ПРОШЛО 5 ДНЕЙ";
     HDC phone = txLoadImage ("самолет.bmp");
     HDC Earth = txLoadImage ("космос.bmp");
@@ -261,6 +265,8 @@ txCreateWindow(800,600);
     HDC goodbye = txLoadImage ("улетел.bmp");
     HDC pochtiprivet = txLoadImage ("прилет.bmp");
     HDC chutprivet = txLoadImage ("приземлет.bmp");
+    HDC cabum = txLoadImage ("кабум.bmp");
+    HDC PRIVET = txLoadImage ("приземлет2.bmp");
 
 
     //1 сцена
@@ -450,10 +456,10 @@ txCreateWindow(800,600);
         txEnd;
         txSleep(15);
     }
-    //5 сцена*/
-    rChel = 1.75;
-    xchel=635-30;
-    ychel=375+150;
+    //5 сцена
+    rChel = 1;
+    xchel=635;
+    ychel=375;
     cChel=RGB(74,97,251);
 
     txBitBlt (txDC(), 0, 0, 800, 600, hello);
@@ -462,8 +468,8 @@ txCreateWindow(800,600);
 
     //6 сцена
     rChel = 1;
-    xchel = 650;
-    ychel = 500;
+    xchel = 450;
+    ychel = 400;
     while(rChel>0.00000000000000000001)
     {
         txBegin();
@@ -488,16 +494,16 @@ txCreateWindow(800,600);
         txSleep(15);
         txEnd();
     }
-    rChel=0.65;
-
-    while(kChel<400)
+    rChel=0.85;
+   //7 сцена
+    while(kChel>-300)
         {
             txBegin();
             drawSky();
             txBitBlt (txDC(), 0, 0, 800, 600, mks);
             drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);
-            drawSuit(xchel,ychel,cChel,rChel,kChel,udiSuit);         //сделать чтоб крутился
-            kChel += 1;
+            drawSuit(xchel,ychel,cChel,rChel,kChel,udiSuit);
+            kChel -= 1;
             txEnd();
             txSleep(15);
         }
@@ -515,19 +521,20 @@ txCreateWindow(800,600);
     ychel=260;
     rChel=1;
     kChel=0;
-
+    //8 сцена
     drawSpace();
     drawText(xtext,ytext,pismo,razmtext);
-    txSleep(2999);
+    txSleep(3999);
 
     txBitBlt (txDC(), 0, 0, 800, 600, goodbye);
     drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);
     drawSuit(xchel,ychel,cChel,rChel,kChel,udiSuit);
-    txSleep(2999);
-
+    txSleep(2999);     */
+    //9 сцена
     while(xCapsul<650)
         {
             txBegin();
+            drawSpace();
             txBitBlt (txDC(), 0, 0, 800, 600, pochtiprivet);
             drawCapsula(xCapsul,yCapsul,rCapsul);
             xCapsul += 3;
@@ -537,19 +544,45 @@ txCreateWindow(800,600);
             txSleep(15);
         }
 xCapsul=800;
-yCapsul=0;
+yCapsul=150;
 
     while(rCapsul<0.5)
         {
                 txBegin();
+                drawSpace();
                 txBitBlt (txDC(), 0, 0, 800, 600, chutprivet);
                 drawCapsula(xCapsul,yCapsul,rCapsul);
                 xCapsul -= 4;
                 yCapsul +=1;
-                rCapsul += 0.006;
+                rCapsul += 0.0045;
                 txEnd();
                 txSleep(15);
         }
+    rKabum=0.000001;
+    while(rKabum<=0.4)
+    {
+        txBegin();
+         drawSpace();
+        txBitBlt (txDC(), 0, 0, 800, 600, chutprivet);
+        drawCapsula(xCapsul,yCapsul,rCapsul);
+        drawKabum(rKabum,cabum);
+        rKabum += 0.01;
+        txEnd();
+        txSleep(15);
+    }
+    xchel=500;
+    ychel=200;
+    while(ychel>120);
+    {
+        txBegin();
+         drawSpace();
+        txBitBlt (txDC(), 0, 0, 800, 600, PRIVET);
+        drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);
+        drawSuit(xchel,ychel,cChel,rChel,kChel,udiSuit);
+        ychel -= 1;
+        txEnd();
+        txSleep(15);
+    }
 
 
 
@@ -563,6 +596,8 @@ txDeleteDC (mks);
 txDeleteDC (goodbye);
 txDeleteDC (pochtiprivet);
 txDeleteDC (chutprivet);
+txDeleteDC (cabum);
+txDeleteDC (PRIVET);
 txTextCursor (false);
 return 0;
 }

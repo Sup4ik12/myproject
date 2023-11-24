@@ -196,3 +196,472 @@ Run file:	D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe
 Directory:	D:\Козлов Кирилл\myproject-main
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {0, 0, 335, 280} не полностью лежит внутри изображения-источника {0, 0, 400, 280}, функция txTransparentBlt() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRe0, Thread: 0x2AE8 (Main), GetLastError(): 13 (Недопустимые данные). 
+From: c:\codeblocks\codeblocks\mingw\include\txlib.h (13677) bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF).
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004228EC in D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0042E42C in D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe: drawKabum() at D:/Козлов Кирилл/myproject-main/main.cpp (221):
+
+    219: void drawKabum(float razm,HDC cabum)
+    220:     {
+=>  221:         txTransparentBlt (txDC(), 235, 210, 235+400*razm, 210+280*razm, cabum,0,0,TX_WHITE);
+    222:     }
+    223: 
+
+# 2 0x0042F1EE in D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe: main() at D:/Козлов Кирилл/myproject-main/main.cpp (564):
+
+    562:         txBitBlt (txDC(), 0, 0, 800, 600, chutprivet);
+    563:         drawCapsula(xCapsul,yCapsul,rCapsul);
+=>  564:         drawKabum(rKabum,cabum);
+    565:         rKabum += 0.01;
+    566:         txEnd();
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13677):
+
+  13675:         {
+  13676: $       SetLastError (ERROR_INVALID_DATA);
+=>13677: $       TX_ERROR ("Прямоугольник копируемой области {%g, %g, %g, %g} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  13678:                   "функция txTransparentBlt() работать не будет.", xSource, ySource, xSource + width, ySource + height, 0, 0, (int) size.x, (int) size.y);
+  13679:         }
+
+# 1 in void drawKabum(float, HDC) at D:\Козлов Кирилл\myproject-main\main.cpp (221):
+
+    219: void drawKabum(float razm,HDC cabum)
+    220:     {
+=>  221:         txTransparentBlt (txDC(), 235, 210, 235+400*razm, 210+280*razm, cabum,0,0,TX_WHITE);
+    222:     }
+    223: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 24 2023 17:44:51, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 24 2023 17:45:16
+
+Run file:	D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe
+Directory:	D:\Козлов Кирилл\myproject-main
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {0, 0, 339, 282.8} не полностью лежит внутри изображения-источника {0, 0, 400, 280}, функция txTransparentBlt() работать не будет.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRe0, Thread: 0x2AE8 (Main), GetLastError(): 13 (Недопустимые данные). 
+From: c:\codeblocks\codeblocks\mingw\include\txlib.h (13677) bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF).
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004228EC in D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0042E42C in D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe: drawKabum() at D:/Козлов Кирилл/myproject-main/main.cpp (221):
+
+    219: void drawKabum(float razm,HDC cabum)
+    220:     {
+=>  221:         txTransparentBlt (txDC(), 235, 210, 235+400*razm, 210+280*razm, cabum,0,0,TX_WHITE);
+    222:     }
+    223: 
+
+# 2 0x0042F1EE in D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe: main() at D:/Козлов Кирилл/myproject-main/main.cpp (564):
+
+    562:         txBitBlt (txDC(), 0, 0, 800, 600, chutprivet);
+    563:         drawCapsula(xCapsul,yCapsul,rCapsul);
+=>  564:         drawKabum(rKabum,cabum);
+    565:         rKabum += 0.01;
+    566:         txEnd();
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13677):
+
+  13675:         {
+  13676: $       SetLastError (ERROR_INVALID_DATA);
+=>13677: $       TX_ERROR ("Прямоугольник копируемой области {%g, %g, %g, %g} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  13678:                   "функция txTransparentBlt() работать не будет.", xSource, ySource, xSource + width, ySource + height, 0, 0, (int) size.x, (int) size.y);
+  13679:         }
+
+# 1 in void drawKabum(float, HDC) at D:\Козлов Кирилл\myproject-main\main.cpp (221):
+
+    219: void drawKabum(float razm,HDC cabum)
+    220:     {
+=>  221:         txTransparentBlt (txDC(), 235, 210, 235+400*razm, 210+280*razm, cabum,0,0,TX_WHITE);
+    222:     }
+    223: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 24 2023 17:44:51, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 24 2023 17:45:16
+
+Run file:	D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe
+Directory:	D:\Козлов Кирилл\myproject-main
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {0, 0, 343, 285.6} не полностью лежит внутри изображения-источника {0, 0, 400, 280}, функция txTransparentBlt() работать не будет.
+
+#3: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRe0, Thread: 0x2AE8 (Main), GetLastError(): 13 (Недопустимые данные). 
+From: c:\codeblocks\codeblocks\mingw\include\txlib.h (13677) bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF).
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004228EC in D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0042E42C in D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe: drawKabum() at D:/Козлов Кирилл/myproject-main/main.cpp (221):
+
+    219: void drawKabum(float razm,HDC cabum)
+    220:     {
+=>  221:         txTransparentBlt (txDC(), 235, 210, 235+400*razm, 210+280*razm, cabum,0,0,TX_WHITE);
+    222:     }
+    223: 
+
+# 2 0x0042F1EE in D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe: main() at D:/Козлов Кирилл/myproject-main/main.cpp (564):
+
+    562:         txBitBlt (txDC(), 0, 0, 800, 600, chutprivet);
+    563:         drawCapsula(xCapsul,yCapsul,rCapsul);
+=>  564:         drawKabum(rKabum,cabum);
+    565:         rKabum += 0.01;
+    566:         txEnd();
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13677):
+
+  13675:         {
+  13676: $       SetLastError (ERROR_INVALID_DATA);
+=>13677: $       TX_ERROR ("Прямоугольник копируемой области {%g, %g, %g, %g} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  13678:                   "функция txTransparentBlt() работать не будет.", xSource, ySource, xSource + width, ySource + height, 0, 0, (int) size.x, (int) size.y);
+  13679:         }
+
+# 1 in void drawKabum(float, HDC) at D:\Козлов Кирилл\myproject-main\main.cpp (221):
+
+    219: void drawKabum(float razm,HDC cabum)
+    220:     {
+=>  221:         txTransparentBlt (txDC(), 235, 210, 235+400*razm, 210+280*razm, cabum,0,0,TX_WHITE);
+    222:     }
+    223: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 24 2023 17:44:51, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 24 2023 17:45:17
+
+Run file:	D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe
+Directory:	D:\Козлов Кирилл\myproject-main
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {0, 0, 347, 288.4} не полностью лежит внутри изображения-источника {0, 0, 400, 280}, функция txTransparentBlt() работать не будет.
+
+#4: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRe0, Thread: 0x2AE8 (Main), GetLastError(): 13 (Недопустимые данные). 
+From: c:\codeblocks\codeblocks\mingw\include\txlib.h (13677) bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF).
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004228EC in D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0042E42C in D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe: drawKabum() at D:/Козлов Кирилл/myproject-main/main.cpp (221):
+
+    219: void drawKabum(float razm,HDC cabum)
+    220:     {
+=>  221:         txTransparentBlt (txDC(), 235, 210, 235+400*razm, 210+280*razm, cabum,0,0,TX_WHITE);
+    222:     }
+    223: 
+
+# 2 0x0042F1EE in D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe: main() at D:/Козлов Кирилл/myproject-main/main.cpp (564):
+
+    562:         txBitBlt (txDC(), 0, 0, 800, 600, chutprivet);
+    563:         drawCapsula(xCapsul,yCapsul,rCapsul);
+=>  564:         drawKabum(rKabum,cabum);
+    565:         rKabum += 0.01;
+    566:         txEnd();
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13677):
+
+  13675:         {
+  13676: $       SetLastError (ERROR_INVALID_DATA);
+=>13677: $       TX_ERROR ("Прямоугольник копируемой области {%g, %g, %g, %g} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  13678:                   "функция txTransparentBlt() работать не будет.", xSource, ySource, xSource + width, ySource + height, 0, 0, (int) size.x, (int) size.y);
+  13679:         }
+
+# 1 in void drawKabum(float, HDC) at D:\Козлов Кирилл\myproject-main\main.cpp (221):
+
+    219: void drawKabum(float razm,HDC cabum)
+    220:     {
+=>  221:         txTransparentBlt (txDC(), 235, 210, 235+400*razm, 210+280*razm, cabum,0,0,TX_WHITE);
+    222:     }
+    223: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 24 2023 17:44:51, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 24 2023 17:45:17
+
+Run file:	D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe
+Directory:	D:\Козлов Кирилл\myproject-main
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {0, 0, 351, 291.2} не полностью лежит внутри изображения-источника {0, 0, 400, 280}, функция txTransparentBlt() работать не будет.
+
+#5: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRe0, Thread: 0x2AE8 (Main), GetLastError(): 13 (Недопустимые данные). 
+From: c:\codeblocks\codeblocks\mingw\include\txlib.h (13677) bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF).
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004228EC in D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0042E42C in D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe: drawKabum() at D:/Козлов Кирилл/myproject-main/main.cpp (221):
+
+    219: void drawKabum(float razm,HDC cabum)
+    220:     {
+=>  221:         txTransparentBlt (txDC(), 235, 210, 235+400*razm, 210+280*razm, cabum,0,0,TX_WHITE);
+    222:     }
+    223: 
+
+# 2 0x0042F1EE in D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe: main() at D:/Козлов Кирилл/myproject-main/main.cpp (564):
+
+    562:         txBitBlt (txDC(), 0, 0, 800, 600, chutprivet);
+    563:         drawCapsula(xCapsul,yCapsul,rCapsul);
+=>  564:         drawKabum(rKabum,cabum);
+    565:         rKabum += 0.01;
+    566:         txEnd();
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13677):
+
+  13675:         {
+  13676: $       SetLastError (ERROR_INVALID_DATA);
+=>13677: $       TX_ERROR ("Прямоугольник копируемой области {%g, %g, %g, %g} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  13678:                   "функция txTransparentBlt() работать не будет.", xSource, ySource, xSource + width, ySource + height, 0, 0, (int) size.x, (int) size.y);
+  13679:         }
+
+# 1 in void drawKabum(float, HDC) at D:\Козлов Кирилл\myproject-main\main.cpp (221):
+
+    219: void drawKabum(float razm,HDC cabum)
+    220:     {
+=>  221:         txTransparentBlt (txDC(), 235, 210, 235+400*razm, 210+280*razm, cabum,0,0,TX_WHITE);
+    222:     }
+    223: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 24 2023 17:44:51, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 24 2023 17:45:16
+
+Run file:	D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe
+Directory:	D:\Козлов Кирилл\myproject-main
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {0, 0, 355, 294} не полностью лежит внутри изображения-источника {0, 0, 400, 280}, функция txTransparentBlt() работать не будет.
+
+#6: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRe0, Thread: 0x2AE8 (Main), GetLastError(): 13 (Недопустимые данные). 
+From: c:\codeblocks\codeblocks\mingw\include\txlib.h (13677) bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF).
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004228EC in D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0042E42C in D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe: drawKabum() at D:/Козлов Кирилл/myproject-main/main.cpp (221):
+
+    219: void drawKabum(float razm,HDC cabum)
+    220:     {
+=>  221:         txTransparentBlt (txDC(), 235, 210, 235+400*razm, 210+280*razm, cabum,0,0,TX_WHITE);
+    222:     }
+    223: 
+
+# 2 0x0042F1EE in D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe: main() at D:/Козлов Кирилл/myproject-main/main.cpp (564):
+
+    562:         txBitBlt (txDC(), 0, 0, 800, 600, chutprivet);
+    563:         drawCapsula(xCapsul,yCapsul,rCapsul);
+=>  564:         drawKabum(rKabum,cabum);
+    565:         rKabum += 0.01;
+    566:         txEnd();
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13677):
+
+  13675:         {
+  13676: $       SetLastError (ERROR_INVALID_DATA);
+=>13677: $       TX_ERROR ("Прямоугольник копируемой области {%g, %g, %g, %g} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  13678:                   "функция txTransparentBlt() работать не будет.", xSource, ySource, xSource + width, ySource + height, 0, 0, (int) size.x, (int) size.y);
+  13679:         }
+
+# 1 in void drawKabum(float, HDC) at D:\Козлов Кирилл\myproject-main\main.cpp (221):
+
+    219: void drawKabum(float razm,HDC cabum)
+    220:     {
+=>  221:         txTransparentBlt (txDC(), 235, 210, 235+400*razm, 210+280*razm, cabum,0,0,TX_WHITE);
+    222:     }
+    223: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 24 2023 17:44:51, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 24 2023 17:45:16
+
+Run file:	D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe
+Directory:	D:\Козлов Кирилл\myproject-main
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {0, 0, 335, 280} не полностью лежит внутри изображения-источника {0, 0, 400, 280}, функция txTransparentBlt() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRe0, Thread: 0x1D28 (Main), GetLastError(): 13 (Недопустимые данные). 
+From: c:\codeblocks\codeblocks\mingw\include\txlib.h (13677) bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF).
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004228EC in D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0042E42C in D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe: drawKabum() at D:/Козлов Кирилл/myproject-main/main.cpp (221):
+
+    219: void drawKabum(float razm,HDC cabum)
+    220:     {
+=>  221:         txTransparentBlt (txDC(), 235, 210, 235+400*razm, 210+280*razm, cabum,0,0,TX_WHITE);
+    222:     }
+    223: 
+
+# 2 0x0042F1EE in D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe: main() at D:/Козлов Кирилл/myproject-main/main.cpp (564):
+
+    562:         txBitBlt (txDC(), 0, 0, 800, 600, chutprivet);
+    563:         drawCapsula(xCapsul,yCapsul,rCapsul);
+=>  564:         drawKabum(rKabum,cabum);
+    565:         rKabum += 0.01;
+    566:         txEnd();
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13677):
+
+  13675:         {
+  13676: $       SetLastError (ERROR_INVALID_DATA);
+=>13677: $       TX_ERROR ("Прямоугольник копируемой области {%g, %g, %g, %g} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  13678:                   "функция txTransparentBlt() работать не будет.", xSource, ySource, xSource + width, ySource + height, 0, 0, (int) size.x, (int) size.y);
+  13679:         }
+
+# 1 in void drawKabum(float, HDC) at D:\Козлов Кирилл\myproject-main\main.cpp (221):
+
+    219: void drawKabum(float razm,HDC cabum)
+    220:     {
+=>  221:         txTransparentBlt (txDC(), 235, 210, 235+400*razm, 210+280*razm, cabum,0,0,TX_WHITE);
+    222:     }
+    223: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 24 2023 17:49:51, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 24 2023 17:50:16
+
+Run file:	D:\Козлов Кирилл\myproject-main\bin\Debug\1 сцена.exe
+Directory:	D:\Козлов Кирилл\myproject-main
+
+--------------------------------------------------
