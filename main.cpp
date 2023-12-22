@@ -185,12 +185,12 @@ void drawfire3(int x,int y)
         POINT fire3[10] = {{x,y},{x+50,y-20},{x+100,y-5},{x+50,y+5},{x+100,y+20},{x+45,y+30},{x+90,y+40},{x+50,y+50},{x+80,y+90},{x,y+55}};
         txPolygon (fire3,10);
     }
-void drawText(int x,int y,const char* text,int razm)
+void drawText(int x1,int y1,const char* text,int razm)
     {
         txSetColor(TX_WHITE);
         txSetFillColor(TX_WHITE);
         txSelectFont("Georgia",razm);
-        txDrawText(x,y,x+566,y+145,text);
+        txDrawText(x1,y1,x1+566,y1+145,text);
     }
 void drawCapsula(int x,int y,float r)
     {
@@ -210,6 +210,22 @@ void drawDialog(int x,int y,float r)
         txEllipse(x,y,x+152*r,y+101*r);
         POINT nuchotam[3] = {{x+96*r,y+97*r},{x+119*r,y+110*r},{x+122*r,y+89*r}};
         txPolygon(nuchotam,3);
+    }
+void drawistorka(int x,int y,float r)
+    {
+        txSetColor(RGB(235, 206, 134),5*r);
+        txSetFillColor(RGB(235, 206, 134));
+        txCircle(x,y,114*r); //385,292
+        txSetColor(RGB(45,198,106),5*r);
+        txSetFillColor(RGB(45,198,106));
+        txEllipse(x-113*r,y+118,x+95*r,y+478*r);
+        txSetColor(TX_BLACK,5);
+        txSetFillColor(TX_BLACK);
+        txCircle(x+36*r,y-32*r,8*r);
+        txCircle(x-49*r,y-32*r,8*r);
+        txArc (x-63,y+44,x+41,y+81,180,180);
+
+
     }
 int main()
 {
@@ -259,9 +275,10 @@ txCreateWindow(800,600);
     HDC PRIVET = txLoadImage ("приземлет2.bmp");
     HDC kucok = txLoadImage ("кусок.bmp");
     HDC intervu = txLoadImage("рассказывает.bmp");
+    HDC nytipsudo = txLoadImage("трибуна.bmp");
     //1 сцена
     //pука вверх
-    while(yarm<100)
+  /*  while(yarm<100)
     {
         txBegin();
         drawSky();
@@ -276,7 +293,7 @@ txCreateWindow(800,600);
         txSleep(15);
     }
 
-   /* //рука вниз
+    //рука вниз
     while(yarm>0)
     {
         txBegin();
@@ -518,9 +535,9 @@ txCreateWindow(800,600);
     txBitBlt (txDC(), 0, 0, 800, 600, goodbye);
     drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);
     drawSuit(xchel,ychel,cChel,rChel,kChel,udiSuit);
-    txSleep(2999);     */
+    txSleep(2999);
     //9 сцена
- /*   while(xCapsul<640)
+    while(xCapsul<640)
         {
             txBegin();
             drawSpace();
@@ -546,7 +563,7 @@ yCapsul=150;
                 rCapsul += 0.0045;
                 txEnd();
                 txSleep(15);
-        }  */
+        }
 
     rKabum=0.000001;
     while(rKabum<=0.4)
@@ -561,6 +578,7 @@ yCapsul=150;
     }
     xchel=370;
     ychel=200;
+    cChel = RGB(149,149,149);
     //11 сцена
     while(ychel>110)
     {
@@ -569,16 +587,28 @@ yCapsul=150;
         drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);
         drawSuit(xchel,ychel,cChel,rChel,kChel,udiSuit);
         txTransparentBlt(txDC(),249,176,285,207,kucok,0,0,TX_WHITE);
-        ychel -= 2;
+        ychel -= 0.8;
         txEnd();
         txSleep(15);
-    }
+    }*/
+txSleep(1000);
 udiChel = 0;
 rChel = 1;
 txBitBlt(txDC(),0,0,800,600,intervu);
-drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);
+drawistorka(485,292,1);
 drawDialog(580,357,1.3);
-drawText(600,327,"Как ощущение того, что вы стали первым ребенком в комсмосе?",6);
+drawText(400,400,"Как ощущение того, что вы \n"" стали первым ребенком в комсмосе?",15);
+txSleep(2000);
+txBitBlt(txDC(),0,0,800,600,intervu);
+drawistorka(485,292,1);
+drawDialog(200,142,1.4);
+drawText(30,185,"Это было потрясающе, земля \n""с космоса выглядит заворащивающе \n""мне очень повезло, что я стал \n""первым в этой сфере",16);
+txSleep(2888);
+txBitBlt(txDC(),0,0,800,600,nytipsudo);
+drawAstronaft(500,350,cChel,1,kChel,yarm,udiChel);
+txSleep(2888);
+
+
 
 txDeleteDC (phone);
 txDeleteDC (Earth);
@@ -593,6 +623,7 @@ txDeleteDC (chutprivet);
 txDeleteDC (cabum);
 txDeleteDC (PRIVET);
 txDeleteDC (kucok);
+txDeleteDC (nytipsudo);
 txTextCursor (false);
 return 0;
 }
