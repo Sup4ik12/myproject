@@ -4,8 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body>
 <tt>
-Build started on: <u>27-11-2023 at 18:26.13</u><br />
-Build ended on: <u>27-11-2023 at 18:26.34</u><p />
+Build started on: <u>22-12-2023 at 18:26.57</u><br />
+Build ended on: <u>22-12-2023 at 18:27.20</u><p />
 <b>-------------- Build: Debug in 1 сцена (compiler: NOT FOR PROJECTS! = MinGW GCC + Strict + Fast + Save (Requires Git))---------------</b><br />
 g++git-auto.bat "D:\Козлов Кирилл\myproject-main\main.cpp" -o "bin\Debug\1 сцена.exe" -mwindows  -Wall -fexceptions  -g  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC<br />
 ------------------------------------------------------------------------------------------------------<br />
@@ -391,7 +391,7 @@ D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawfire
       ^<br />
 D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawText(int, int, const char*, int)':<br />
 <font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:188:6: warning: no previous declaration for 'void drawText(int, int, const char*, int)' [-Wmissing-declarations]</font><br />
- void drawText(int x,int y,const char* text,int razm)<br />
+ void drawText(int x1,int y1,const char* text,int razm)<br />
       ^<br />
 D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawCapsula(int, int, float)':<br />
 <font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:195:6: warning: no previous declaration for 'void drawCapsula(int, int, float)' [-Wmissing-declarations]</font><br />
@@ -407,16 +407,16 @@ In file included from D:\Козлов Кирилл\myproject-main\main.cpp:1:0:<
 <font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:200:23: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
          txCircle(x+50*r,y,50*r);<br />
                        ^<br />
-D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawKabum(float, HDC)':<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:202:6: warning: no previous declaration for 'void drawKabum(float, HDC)' [-Wmissing-declarations]</font><br />
- void drawKabum(float razm,HDC cabum)<br />
+D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawKabum(int, int, float, HDC)':<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:202:6: warning: no previous declaration for 'void drawKabum(int, int, float, HDC)' [-Wmissing-declarations]</font><br />
+ void drawKabum(int x,int y,float razm,HDC cabum)<br />
       ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:204:53: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]</font><br />
-         Win32::TransparentBlt (txDC(), 250, 225, 415*razm, 295*razm, cabum,0,0, 400, 280, TX_WHITE);<br />
-                                                     ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:204:63: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]</font><br />
-         Win32::TransparentBlt (txDC(), 250, 225, 415*razm, 295*razm, cabum,0,0, 400, 280, TX_WHITE);<br />
-                                                               ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:204:49: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]</font><br />
+         Win32::TransparentBlt (txDC(), x, y, 415*razm, 295*razm, cabum,0,0, 400, 280, TX_WHITE);<br />
+                                                 ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:204:59: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]</font><br />
+         Win32::TransparentBlt (txDC(), x, y, 415*razm, 295*razm, cabum,0,0, 400, 280, TX_WHITE);<br />
+                                                           ^<br />
 D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawDialog(int, int, float)':<br />
 <font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:206:6: warning: no previous declaration for 'void drawDialog(int, int, float)' [-Wmissing-declarations]</font><br />
  void drawDialog(int x,int y,float r)<br />
@@ -470,78 +470,167 @@ In file included from D:\Козлов Кирилл\myproject-main\main.cpp:1:0:<
          POINT nuchotam[3] = {{x+96*r,y+97*r},{x+119*r,y+110*r},{x+122*r,y+89*r}};<br />
                                                                           ^<br />
 <font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:211:74: warning: conversion to 'LONG {aka long int}' from 'float' may alter its value [-Wconversion]</font><br />
+D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawistorka(int, int, float)':<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:214:6: warning: no previous declaration for 'void drawistorka(int, int, float)' [-Wmissing-declarations]</font><br />
+ void drawistorka(int x,int y,float r)<br />
+      ^<br />
+In file included from D:\Козлов Кирилл\myproject-main\main.cpp:1:0:<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:221:25: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         txEllipse(x-113*r,y+118,x+95*r,y+478*r);<br />
+                         ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:221:38: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         txEllipse(x-113*r,y+118,x+95*r,y+478*r);<br />
+                                      ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:221:46: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         txEllipse(x-113*r,y+118,x+95*r,y+478*r);<br />
+                                              ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:224:23: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         txCircle(x+36*r,y-32*r,8*r);<br />
+                       ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:224:30: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         txCircle(x+36*r,y-32*r,8*r);<br />
+                              ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:225:23: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         txCircle(x-49*r,y-32*r,8*r);<br />
+                       ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:225:30: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         txCircle(x-49*r,y-32*r,8*r);<br />
+                              ^<br />
+D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void drawMedal(int, int, float)':<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:230:6: warning: no previous declaration for 'void drawMedal(int, int, float)' [-Wmissing-declarations]</font><br />
+ void drawMedal(int x,int y, float r)<br />
+      ^<br />
+In file included from D:\Козлов Кирилл\myproject-main\main.cpp:1:0:<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:237:25: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         txRectangle(x-5*r,y-29*r,x+4*r,y-11*r);<br />
+                         ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:237:32: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         txRectangle(x-5*r,y-29*r,x+4*r,y-11*r);<br />
+                                ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:237:38: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         txRectangle(x-5*r,y-29*r,x+4*r,y-11*r);<br />
+                                      ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:237:45: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         txRectangle(x-5*r,y-29*r,x+4*r,y-11*r);<br />
+                                             ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:238:26: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         txRectangle(x-16*r,y-22*r,x+11*r,y-12*r);<br />
+                          ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:238:33: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         txRectangle(x-16*r,y-22*r,x+11*r,y-12*r);<br />
+                                 ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:238:40: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         txRectangle(x-16*r,y-22*r,x+11*r,y-12*r);<br />
+                                        ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:238:47: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+         txRectangle(x-16*r,y-22*r,x+11*r,y-12*r);<br />
+                                               ^<br />
+D:\Козлов Кирилл\myproject-main\main.cpp: In function 'void vce(int, int, HDC)':<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:242:6: warning: no previous declaration for 'void vce(int, int, HDC)' [-Wmissing-declarations]</font><br />
+ void vce(int x,int y,HDC babax)<br />
+      ^<br />
 D:\Козлов Кирилл\myproject-main\main.cpp: In function 'int main()':<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:272:65: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
-         drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);<br />
-                                                                 ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:551:11: warning: conversion to 'float' alters 'double' constant value [-Wconversion]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:583:21: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]</font><br />
+             rCapsul -= 0.007;<br />
+                     ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:598:25: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]</font><br />
+                 rCapsul += 0.0045;<br />
+                         ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:603:11: warning: conversion to 'float' alters 'double' constant value [-Wconversion]</font><br />
      rKabum=0.000001;<br />
            ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:558:16: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:612:16: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]</font><br />
          rKabum += 0.01;<br />
                 ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:569:65: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:613:16: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         xKabum -= 1.5;<br />
+                ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:614:16: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         yKabum -= 1.5;<br />
+                ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:627:65: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
          drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);<br />
                                                                  ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:579:57: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
- drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);<br />
-                                                         ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:580:23: warning: conversion to 'float' alters 'double' constant value [-Wconversion]</font><br />
- drawDialog(600,357,1.3);<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:630:15: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         ychel -= 0.8;<br />
+               ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:639:23: warning: conversion to 'float' alters 'double' constant value [-Wconversion]</font><br />
+ drawDialog(580,357,1.3);<br />
                        ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:228:9: warning: unused variable 'xBox' [-Wunused-variable]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:644:23: warning: conversion to 'float' alters 'double' constant value [-Wconversion]</font><br />
+ drawDialog(200,142,1.4);<br />
+                       ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:649:23: warning: conversion to 'float' alters 'double' constant value [-Wconversion]</font><br />
+ drawDialog(580,357,1.3);<br />
+                       ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:654:22: warning: conversion to 'float' alters 'double' constant value [-Wconversion]</font><br />
+ drawMedal(710,500,0.9);<br />
+                      ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:662:30: warning: conversion to 'float' alters 'double' constant value [-Wconversion]</font><br />
+         drawMedal(710,500,0.9);<br />
+                              ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:664:17: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+         ykapets += 1.99;<br />
+                 ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:260:9: warning: unused variable 'xBox' [-Wunused-variable]</font><br />
      int xBox = 475;<br />
          ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:229:9: warning: unused variable 'yFire' [-Wunused-variable]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:261:9: warning: unused variable 'yFire' [-Wunused-variable]</font><br />
      int yFire = 380;<br />
          ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:230:9: warning: unused variable 'xFire' [-Wunused-variable]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:262:9: warning: unused variable 'xFire' [-Wunused-variable]</font><br />
      int xFire = 585;<br />
          ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:233:9: warning: unused variable 'xdvigatel' [-Wunused-variable]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:263:9: warning: unused variable 'drozh' [-Wunused-variable]</font><br />
+     int drozh = 610;<br />
+         ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:265:9: warning: unused variable 'xdvigatel' [-Wunused-variable]</font><br />
      int xdvigatel = 610;<br />
          ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:235:9: warning: unused variable 'xr' [-Wunused-variable]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:266:9: warning: unused variable 'toplivo' [-Wunused-variable]</font><br />
+     int toplivo = vzlet+5;<br />
+         ^<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:267:9: warning: unused variable 'xr' [-Wunused-variable]</font><br />
      int xr = 1000;<br />
          ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:236:9: warning: unused variable 'yr' [-Wunused-variable]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:268:9: warning: unused variable 'yr' [-Wunused-variable]</font><br />
      int yr = 280;<br />
          ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:237:9: warning: unused variable 'xoguz' [-Wunused-variable]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:269:9: warning: unused variable 'xoguz' [-Wunused-variable]</font><br />
      int xoguz = 1000;<br />
          ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:238:9: warning: unused variable 'yoguz' [-Wunused-variable]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:270:9: warning: unused variable 'yoguz' [-Wunused-variable]</font><br />
      int yoguz = 280;<br />
          ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:239:9: warning: unused variable 'xfire3' [-Wunused-variable]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:271:9: warning: unused variable 'xfire3' [-Wunused-variable]</font><br />
      int xfire3 = 1236;<br />
          ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:240:9: warning: unused variable 'yfire3' [-Wunused-variable]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:272:9: warning: unused variable 'yfire3' [-Wunused-variable]</font><br />
      int yfire3 = 254;<br />
          ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:241:9: warning: unused variable 'xtext' [-Wunused-variable]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:273:9: warning: unused variable 'xtext' [-Wunused-variable]</font><br />
      int xtext = 100;<br />
          ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:242:9: warning: unused variable 'ytext' [-Wunused-variable]</font><br />
-     int ytext = 210;<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:274:9: warning: unused variable 'ytext' [-Wunused-variable]</font><br />
+     int ytext = 600;<br />
          ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:243:9: warning: unused variable 'razmtext' [-Wunused-variable]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:275:9: warning: unused variable 'razmtext' [-Wunused-variable]</font><br />
      int razmtext = 70;<br />
          ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:245:17: warning: unused variable 'pismo' [-Wunused-variable]</font><br />
-     const char* pismo = "ПРОШЛО 5 ДНЕЙ";<br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:279:17: warning: unused variable 'pismo' [-Wunused-variable]</font><br />
+     const char* pismo = "Вызов 2\n""Первый ребенок в космосе";<br />
                  ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:246:9: warning: unused variable 'xcloud' [-Wunused-variable]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:280:9: warning: unused variable 'xcloud' [-Wunused-variable]</font><br />
      int xcloud = 0;<br />
          ^<br />
-<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:247:9: warning: unused variable 'ycloud' [-Wunused-variable]</font><br />
+<font color="#0000ff">D:\Козлов Кирилл\myproject-main\main.cpp:281:9: warning: unused variable 'ycloud' [-Wunused-variable]</font><br />
      int ycloud = 0;<br />
          ^<br />
 ------------------------------------------------------------------------------------------------------<br />
 Autosaving to the Git repository in D:/ /myproject-main/.git-auto/... <br />
-Output size is 2,26 MB<br />
-<font color="#0000ff">Process terminated with status 0 (0 minutes, 20 seconds)</font><br />
-<font color="#0000ff">0 errors, 172 warnings (0 minutes, 20 seconds)</font><br />
+Output size is 2,27 MB<br />
+<font color="#0000ff">Process terminated with status 0 (0 minutes, 23 seconds)</font><br />
+<font color="#0000ff">0 errors, 200 warnings (0 minutes, 23 seconds)</font><br />
 </tt>
 </body>
 </html>

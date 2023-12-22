@@ -190,7 +190,7 @@ void drawText(int x1,int y1,const char* text,int razm)
         txSetColor(TX_WHITE);
         txSetFillColor(TX_WHITE);
         txSelectFont("Georgia",razm);
-        txDrawText(x1,y1,x1+566,y1+145,text);
+        txDrawText(x1,y1,x1+566,y1+300,text);
     }
 void drawCapsula(int x,int y,float r)
     {
@@ -199,9 +199,9 @@ void drawCapsula(int x,int y,float r)
         txRectangle(x,y,x+100*r,y+50*r);
         txCircle(x+50*r,y,50*r);
     }
-void drawKabum(float razm,HDC cabum)
+void drawKabum(int x,int y,float razm,HDC cabum)
     {
-        Win32::TransparentBlt (txDC(), 250, 225, 415*razm, 295*razm, cabum,0,0, 400, 280, TX_WHITE);
+        Win32::TransparentBlt (txDC(), x, y, 415*razm, 295*razm, cabum,0,0, 400, 280, TX_WHITE);
     }
 void drawDialog(int x,int y,float r)
     {
@@ -227,6 +227,22 @@ void drawistorka(int x,int y,float r)
 
 
     }
+void drawMedal(int x,int y, float r)
+    {
+        txSetColor(RGB(205,216,71));
+        txSetFillColor(RGB(205,216,71));
+        txCircle(x,y,10*r);
+         txSetColor(RGB(123,4,4));
+        txSetFillColor(RGB(123,4,4));
+        txRectangle(x-5*r,y-29*r,x+4*r,y-11*r);
+        txRectangle(x-16*r,y-22*r,x+11*r,y-12*r);
+
+
+    }
+void vce(int x,int y,HDC babax)
+{
+    Win32::TransparentBlt (txDC(),x,y,x+134,x+219,babax,0,0,134,219,TX_WHITE);
+}
 int main()
 {
 txCreateWindow(800,600);
@@ -255,12 +271,16 @@ txCreateWindow(800,600);
     int xfire3 = 1236;
     int yfire3 = 254;
     int xtext = 100;
-    int ytext = 210;
+    int ytext = 600;
     int razmtext = 70;
     float rKabum = 1;
-    const char* pismo = "ПРОШЛО 5 ДНЕЙ";
+    int xKabum = 640;
+    int yKabum = 300;
+    const char* pismo = "Вызов 2\n""Первый ребенок в космосе";
     int xcloud = 0;
     int ycloud = 0;
+    int xkapets = 333;
+    int ykapets = -100;
     HDC phone = txLoadImage ("самолет.bmp");
     HDC Earth = txLoadImage ("космос.bmp");
     HDC Vishe = txLoadImage ("землячутьвыше.bmp");
@@ -276,9 +296,20 @@ txCreateWindow(800,600);
     HDC kucok = txLoadImage ("кусок.bmp");
     HDC intervu = txLoadImage("рассказывает.bmp");
     HDC nytipsudo = txLoadImage("трибуна.bmp");
+    HDC babax = txLoadImage ("капец.bmp");
     //1 сцена
     //pука вверх
-  /*  while(yarm<100)
+   /* while (ytext>0)
+        {
+            txBegin();
+            drawSpace();
+            drawText(xtext,ytext,pismo,razmtext);
+            ytext -= 2;
+            txEnd();
+            txSleep(15);
+
+        }              */
+   /* while(yarm<100)
     {
         txBegin();
         drawSky();
@@ -529,6 +560,10 @@ txCreateWindow(800,600);
     kChel=0;
     //8 сцена
     drawSpace();
+xtext = 100;
+ytext = 210;
+razmtext = 70;
+const char* pismo = "ПРОШЛО 5 ДНЕЙ";
     drawText(xtext,ytext,pismo,razmtext);
     txSleep(3999);
 
@@ -536,7 +571,7 @@ txCreateWindow(800,600);
     drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);
     drawSuit(xchel,ychel,cChel,rChel,kChel,udiSuit);
     txSleep(2999);
-    //9 сцена
+    //9 сцена         */
     while(xCapsul<640)
         {
             txBegin();
@@ -566,16 +601,21 @@ yCapsul=150;
         }
 
     rKabum=0.000001;
+    xKabum=360;
+    yKabum=310;
     while(rKabum<=0.4)
     {
         txBegin();
         txBitBlt (txDC(), 0, 0, 800, 600, chutprivet);
         drawCapsula(xCapsul,yCapsul,rCapsul);
-        drawKabum(rKabum,cabum);
+        drawKabum(xKabum,yKabum,rKabum,cabum);
         rKabum += 0.01;
+        xKabum -= 1.5;
+        yKabum -= 1.5;
         txEnd();
         txSleep(15);
     }
+    txSleep(1222);
     xchel=370;
     ychel=200;
     cChel = RGB(149,149,149);
@@ -590,7 +630,7 @@ yCapsul=150;
         ychel -= 0.8;
         txEnd();
         txSleep(15);
-    }*/
+    }
 txSleep(1000);
 udiChel = 0;
 rChel = 1;
@@ -602,14 +642,28 @@ txSleep(2000);
 txBitBlt(txDC(),0,0,800,600,intervu);
 drawistorka(485,292,1);
 drawDialog(200,142,1.4);
-drawText(30,185,"Это было потрясающе, земля \n""с космоса выглядит заворащивающе \n""мне очень повезло, что я стал \n""первым в этой сфере",16);
+drawText(30,185,"Это было потрясающе, земля \n""с космоса выглядит заворащивающе \n""мне очень повезло, что я стал \n""первым в этой сфере",20);
+txSleep(2998);
+txBitBlt(txDC(),0,0,800,600,intervu);
+drawistorka(485,292,1);
+drawDialog(580,357,1.3);
+drawText(400,400,"пройдемте за \n""мной",35);
 txSleep(2888);
 txBitBlt(txDC(),0,0,800,600,nytipsudo);
-drawAstronaft(500,350,cChel,1,kChel,yarm,udiChel);
+drawistorka(670,292,1);
+drawMedal(710,500,0.9);
 txSleep(2888);
-
-
-
+while (ykapets <400)
+    {
+        txBegin();
+        txBitBlt (txDC(), 0, 0, 800, 600, nytipsudo);
+        drawistorka(670,292,1);
+        drawMedal(710,500,0.9);
+        vce(xkapets,ykapets,babax);
+        ykapets += 1.99;
+        txEnd();
+        txSleep(15);
+    }
 txDeleteDC (phone);
 txDeleteDC (Earth);
 txDeleteDC (Vishe);
