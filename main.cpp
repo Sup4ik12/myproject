@@ -241,7 +241,7 @@ void drawMedal(int x,int y, float r)
     }
 void vce(int x,int y,HDC babax)
 {
-    Win32::TransparentBlt (txDC(),x,y,x+134,x+219,babax,0,0,134,219,TX_WHITE);
+    Win32::TransparentBlt (txDC(),x,y,134,219,babax,0,0,134,219,TX_WHITE);
 }
 int main()
 {
@@ -299,7 +299,7 @@ txCreateWindow(800,600);
     HDC babax = txLoadImage ("капец.bmp");
     //1 сцена
     //pука вверх
-   /* while (ytext>0)
+    while (ytext>0)
         {
             txBegin();
             drawSpace();
@@ -308,8 +308,8 @@ txCreateWindow(800,600);
             txEnd();
             txSleep(15);
 
-        }              */
-   /* while(yarm<100)
+        }
+    while(yarm<100)
     {
         txBegin();
         drawSky();
@@ -563,7 +563,7 @@ txCreateWindow(800,600);
 xtext = 100;
 ytext = 210;
 razmtext = 70;
-const char* pismo = "ПРОШЛО 5 ДНЕЙ";
+ pismo = "ПРОШЛО 5 ДНЕЙ";
     drawText(xtext,ytext,pismo,razmtext);
     txSleep(3999);
 
@@ -571,7 +571,7 @@ const char* pismo = "ПРОШЛО 5 ДНЕЙ";
     drawAstronaft(xchel,ychel,cChel,rChel,kChel,yarm,udiChel);
     drawSuit(xchel,ychel,cChel,rChel,kChel,udiSuit);
     txSleep(2999);
-    //9 сцена         */
+    //9 сцена
     while(xCapsul<640)
         {
             txBegin();
@@ -602,7 +602,7 @@ yCapsul=150;
 
     rKabum=0.000001;
     xKabum=360;
-    yKabum=310;
+    yKabum=300;
     while(rKabum<=0.4)
     {
         txBegin();
@@ -643,7 +643,7 @@ txBitBlt(txDC(),0,0,800,600,intervu);
 drawistorka(485,292,1);
 drawDialog(200,142,1.4);
 drawText(30,185,"Это было потрясающе, земля \n""с космоса выглядит заворащивающе \n""мне очень повезло, что я стал \n""первым в этой сфере",20);
-txSleep(2998);
+txSleep(3459);
 txBitBlt(txDC(),0,0,800,600,intervu);
 drawistorka(485,292,1);
 drawDialog(580,357,1.3);
@@ -653,17 +653,43 @@ txBitBlt(txDC(),0,0,800,600,nytipsudo);
 drawistorka(670,292,1);
 drawMedal(710,500,0.9);
 txSleep(2888);
-while (ykapets <400)
+while (ykapets <300)
     {
         txBegin();
         txBitBlt (txDC(), 0, 0, 800, 600, nytipsudo);
         drawistorka(670,292,1);
         drawMedal(710,500,0.9);
         vce(xkapets,ykapets,babax);
-        ykapets += 1.99;
+        ykapets += 5.99;
         txEnd();
         txSleep(15);
     }
+yKabum=290;
+xKabum=300;
+rKabum=0.00000000000000000000000000000001;
+while (rKabum<=3.5)
+    {
+        txBegin();
+        txBitBlt (txDC(), 0, 0, 800, 600, nytipsudo);
+        drawistorka(670,292,1);
+        drawMedal(710,500,0.9);
+        drawKabum(xKabum,yKabum,rKabum,cabum);
+        rKabum += 0.1;
+        xKabum -= 15;
+        yKabum -= 15;
+        txEnd();
+        txSleep(15);
+    }
+ytext=600;
+while(ytext>= 0)
+{
+        txBegin();
+        drawSpace();
+        drawText(200,ytext,"Все кто делал - Козлов Кирилл", 50);
+        ytext-=3;
+        txEnd();
+        txSleep(15);
+}
 txDeleteDC (phone);
 txDeleteDC (Earth);
 txDeleteDC (Vishe);
